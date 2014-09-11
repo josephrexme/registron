@@ -9,6 +9,9 @@
 import sys, webbrowser
 from PyQt4 import QtGui, QtCore
 from ui_registron import Ui_MainWindow
+from aboutDialog import Ui_AboutDialog
+from creditDialog import Ui_creditDialog
+from authDialog import Ui_authDialog
 try:
 	import pyttsx
 except ImportError:
@@ -20,22 +23,48 @@ class Main(QtGui.QMainWindow):
 		QtGui.QMainWindow.__init__(self)
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
-		self.ui.connect(self.greetWelcome)
 		self.ui.proceedBtn.clicked.connect(self.checkCampusID)
 
 		#Menu Actions
 		self.ui.actionQuit.triggered.connect(self.close)
 		self.ui.actionDocumentation.triggered.connect(self.openGitPage)
-		# self.ui.actionAbout.triggered.connect(self.aboutProgram)
-		# self.ui.actionCredits.triggered.connect(self.showCredits)
-		# self.ui.actionNewWindow.triggered.connect(self.cloneWindow)
-		# self.ui.actionSignIn.triggered.connect(self.adminAuth)
+		self.ui.actionAbout.triggered.connect(about.show)
+		self.ui.actionCredits.triggered.connect(credits.show)
+		# self.ui.actionNewWindow.triggered.connect(window.clone)
+		self.ui.actionSignIn.triggered.connect(authentication.show)
 	def greetWelcome(self):
 		function.talk("Welcome to Registron")
+		function.talk("If you are a student, enter your campus ID to proceed from here")
 	def checkCampusID(self):
 		campusID = self.ui.matricInput.toPlainText()
+		if campusID != '':
+			self.hide()
+			self.show()
+		else:
+			function.talk("Your input is empty. Please type your campus ID to log in as a student")
 	def openGitPage(self):
-		webbrowser.open('http://github.com/bl4ckdu5t/registron')
+		webbrowser.open('https://github.com/bl4ckdu5t/registron')
+
+class AboutBox(QtGui.QDialog):
+	"""Displays about dialog"""
+	def __init__(self):
+		QtGui.QDialog.__init__(self)
+		self.ui = Ui_AboutDialog()
+		self.ui.setupUi(self)
+
+class CreditBox(QtGui.QDialog):
+	"""Displays Credit dialog"""
+	def __init__(self):
+		QtGui.QDialog.__init__(self)
+		self.ui = Ui_creditDialog()
+		self.ui.setupUi(self)
+
+class Authentication(QtGui.QDialog):
+	"""Displays Credit dialog"""
+	def __init__(self):
+		QtGui.QDialog.__init__(self)
+		self.ui = Ui_authDialog()
+		self.ui.setupUi(self)
 	
 
 class programFunctions:
@@ -47,12 +76,15 @@ class programFunctions:
 		engine.runAndWait()
 
 function = programFunctions()
-		
 
-if __name__ == '__main__':	
-	app = QtGui.QApplication(sys.argv)
+app = QtGui.QApplication(sys.argv)
+about = AboutBox()
+credits = CreditBox()
+authentication = Authentication()
+
+if __name__ == '__main__':
 	window = Main()
-
 	window.show()
+	window.greetWelcome()
 	sys.exit(app.exec_())
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
+ <author>Joseph Rex</author>
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
@@ -15,7 +16,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../Pictures/blackhat.png</normaloff>../../../../Pictures/blackhat.png</iconset>
+    <normaloff>../../../../.designer/backup/resources/images/registron.png</normaloff>../../../../.designer/backup/resources/images/registron.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background: rgb(10, 80, 111);</string>
@@ -152,7 +153,6 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionSignIn"/>
     <addaction name="separator"/>
-    <addaction name="actionManage_Courses"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -181,7 +181,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionDocumentation">
    <property name="text">
-    <string>Documentation</string>
+    <string>Online Documentation</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+?</string>
@@ -216,15 +216,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSignIn">
    <property name="text">
-    <string>Manage Students</string>
-   </property>
-  </action>
-  <action name="actionManage_Courses">
-   <property name="text">
-    <string>Manage Courses</string>
-   </property>
-   <property name="statusTip">
-    <string>Manage the courses available to students</string>
+    <string>Manage Accounts</string>
    </property>
   </action>
  </widget>

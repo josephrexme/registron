@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'registron.ui'
 #
-# Created: Wed Sep 10 07:51:36 2014
+# Created: Thu Sep 11 11:32:18 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(749, 518)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../../../Pictures/blackhat.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../../../.designer/backup/resources/images/registron.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111);"))
         self.centralwidget = QtGui.QWidget(MainWindow)
@@ -56,9 +56,6 @@ class Ui_MainWindow(object):
         self.matricInput.setGeometry(QtCore.QRect(230, 280, 301, 31))
         self.matricInput.setStyleSheet(_fromUtf8("background:white;color: black;"))
         self.matricInput.setObjectName(_fromUtf8("matricInput"))
-        self.textBrowser = QtGui.QTextBrowser(self.centralwidget)
-        self.textBrowser.setGeometry(QtCore.QRect(565, 191, 161, 161))
-        self.textBrowser.setObjectName(_fromUtf8("textBrowser"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 749, 21))
@@ -85,14 +82,11 @@ class Ui_MainWindow(object):
         self.actionNewWindow.setObjectName(_fromUtf8("actionNewWindow"))
         self.actionSignIn = QtGui.QAction(MainWindow)
         self.actionSignIn.setObjectName(_fromUtf8("actionSignIn"))
-        self.actionManage_Courses = QtGui.QAction(MainWindow)
-        self.actionManage_Courses.setObjectName(_fromUtf8("actionManage_Courses"))
         self.menuMenu.addAction(self.actionNewWindow)
         self.menuMenu.addSeparator()
         self.menuMenu.addAction(self.actionQuit)
         self.menuAdministrators.addAction(self.actionSignIn)
         self.menuAdministrators.addSeparator()
-        self.menuAdministrators.addAction(self.actionManage_Courses)
         self.menuHelp.addAction(self.actionDocumentation)
         self.menuHelp.addSeparator()
         self.menuHelp.addAction(self.actionAbout)
@@ -122,7 +116,7 @@ class Ui_MainWindow(object):
         self.actionQuit.setText(QtGui.QApplication.translate("MainWindow", "Quit registron", None, QtGui.QApplication.UnicodeUTF8))
         self.actionQuit.setStatusTip(QtGui.QApplication.translate("MainWindow", "Exit this program", None, QtGui.QApplication.UnicodeUTF8))
         self.actionQuit.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+Q", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionDocumentation.setText(QtGui.QApplication.translate("MainWindow", "Documentation", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionDocumentation.setText(QtGui.QApplication.translate("MainWindow", "Online Documentation", None, QtGui.QApplication.UnicodeUTF8))
         self.actionDocumentation.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+?", None, QtGui.QApplication.UnicodeUTF8))
         self.actionAbout.setText(QtGui.QApplication.translate("MainWindow", "About Registron", None, QtGui.QApplication.UnicodeUTF8))
         self.actionAbout.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+A", None, QtGui.QApplication.UnicodeUTF8))
@@ -131,7 +125,5 @@ class Ui_MainWindow(object):
         self.actionNewWindow.setText(QtGui.QApplication.translate("MainWindow", "Open in new window", None, QtGui.QApplication.UnicodeUTF8))
         self.actionNewWindow.setStatusTip(QtGui.QApplication.translate("MainWindow", "Open a new registron window", None, QtGui.QApplication.UnicodeUTF8))
         self.actionNewWindow.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+N", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSignIn.setText(QtGui.QApplication.translate("MainWindow", "Manage Students", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionManage_Courses.setText(QtGui.QApplication.translate("MainWindow", "Manage Courses", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionManage_Courses.setStatusTip(QtGui.QApplication.translate("MainWindow", "Manage the courses available to students", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionSignIn.setText(QtGui.QApplication.translate("MainWindow", "Manage Accounts", None, QtGui.QApplication.UnicodeUTF8))
 
