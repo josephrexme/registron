@@ -4,10 +4,10 @@ Registron
 Registron is a speech-based registration program
 
 #### Build Information
-- Python 2.7
+- [Python 2.7][python]
 - PyQt4
 - Pyuic 4.9.3
-- Qt 4.8.3
+- [Qt Designer 4.8.2][qtproject]
 
 #### Third Party Modules
 - Pyttsx (Python Text To Speech)
@@ -16,13 +16,9 @@ Registron is a speech-based registration program
 
 ```python registron.py``` or ```./registron.py``` in *nix like systems. Windows users can also run this from Idle.
 
-```flow
-st=>start: Start
-e=>end
-op=>operation: Run Registron
-cond=>condition: Exit program?
+#### Contributors
+- [Joseph Rex](http://josephrex.me)
+- James Olanipekun
 
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
+[qtproject]:http://qt-project.org
+[python]:http://python.org
