@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'registron.ui'
+# Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Sat Sep 13 13:18:08 2014
+# Created: Sat Sep 13 14:13:07 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,7 +17,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(749, 518)
+        MainWindow.resize(747, 516)
         MainWindow.setMinimumSize(QtCore.QSize(329, 218))
         MainWindow.setMouseTracking(False)
         icon = QtGui.QIcon()
@@ -61,7 +61,7 @@ class Ui_MainWindow(object):
         self.matricInput.setObjectName(_fromUtf8("matricInput"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 749, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 747, 21))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName(_fromUtf8("menuMenu"))
@@ -81,8 +81,6 @@ class Ui_MainWindow(object):
         self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
         self.actionCredits = QtGui.QAction(MainWindow)
         self.actionCredits.setObjectName(_fromUtf8("actionCredits"))
-        self.actionNewWindow = QtGui.QAction(MainWindow)
-        self.actionNewWindow.setObjectName(_fromUtf8("actionNewWindow"))
         self.actionSignIn = QtGui.QAction(MainWindow)
         self.actionSignIn.setObjectName(_fromUtf8("actionSignIn"))
         self.menuMenu.addAction(self.actionQuit)
@@ -124,8 +122,5 @@ class Ui_MainWindow(object):
         self.actionAbout.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+A", None, QtGui.QApplication.UnicodeUTF8))
         self.actionCredits.setText(QtGui.QApplication.translate("MainWindow", "Credits", None, QtGui.QApplication.UnicodeUTF8))
         self.actionCredits.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+R", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionNewWindow.setText(QtGui.QApplication.translate("MainWindow", "Open in new window", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionNewWindow.setStatusTip(QtGui.QApplication.translate("MainWindow", "Open a new registron window", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionNewWindow.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+N", None, QtGui.QApplication.UnicodeUTF8))
         self.actionSignIn.setText(QtGui.QApplication.translate("MainWindow", "Manage Accounts", None, QtGui.QApplication.UnicodeUTF8))
 

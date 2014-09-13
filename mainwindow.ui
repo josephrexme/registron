@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>749</width>
-    <height>518</height>
+    <width>747</width>
+    <height>516</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -147,7 +147,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>749</width>
+     <width>747</width>
      <height>21</height>
     </rect>
    </property>
@@ -214,23 +214,13 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+R</string>
    </property>
   </action>
-  <action name="actionNewWindow">
-   <property name="text">
-    <string>Open in new window</string>
-   </property>
-   <property name="statusTip">
-    <string>Open a new registron window</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+N</string>
-   </property>
-  </action>
   <action name="actionSignIn">
    <property name="text">
     <string>Manage Accounts</string>
    </property>
   </action>
  </widget>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>
