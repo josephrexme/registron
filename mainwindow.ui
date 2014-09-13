@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>747</width>
-    <height>516</height>
+    <width>745</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -147,7 +147,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>747</width>
+     <width>745</width>
      <height>21</height>
     </rect>
    </property>
@@ -173,6 +173,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
     <addaction name="actionCredits"/>
+    <addaction name="actionLicense"/>
    </widget>
    <addaction name="menuMenu"/>
    <addaction name="menuAdministrators"/>
@@ -217,6 +218,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionSignIn">
    <property name="text">
     <string>Manage Accounts</string>
+   </property>
+  </action>
+  <action name="actionLicense">
+   <property name="text">
+    <string>License</string>
    </property>
   </action>
  </widget>

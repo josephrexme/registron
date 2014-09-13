@@ -12,7 +12,7 @@ from ui_registron import Ui_MainWindow
 from aboutDialog import Ui_AboutDialog
 from creditDialog import Ui_creditDialog
 from authDialog import Ui_authDialog
-from exitDialog import Ui_exitDialog
+from licenseDialog import Ui_licenseDialog
 try:
 	import pyttsx
 except ImportError:
@@ -27,11 +27,12 @@ class Main(QtGui.QMainWindow):
 		self.ui.proceedBtn.clicked.connect(self.checkCampusID)
 
 		#Menu Actions
-		self.ui.actionQuit.triggered.connect(appExit.show)
+		self.ui.actionQuit.triggered.connect(self.close)
 		self.ui.actionDocumentation.triggered.connect(self.openGitPage)
 		self.ui.actionAbout.triggered.connect(about.show)
 		self.ui.actionCredits.triggered.connect(credits.show)
 		self.ui.actionSignIn.triggered.connect(authentication.show)
+		self.ui.actionLicense.triggered.connect(license.show)
 	def greetWelcome(self):
 		function.talk("Welcome to Registron")
 	def checkCampusID(self):
@@ -58,21 +59,19 @@ class CreditBox(QtGui.QDialog):
 		self.ui = Ui_creditDialog()
 		self.ui.setupUi(self)
 
-class exitBox(QtGui.QDialog):
-	"""Displays Credit dialog"""
-	def __init__(self):
-		QtGui.QDialog.__init__(self)
-		self.ui = Ui_exitDialog()
-		self.ui.setupUi(self)
-		self.ui.yesExit.clicked.connect(self.close)
-
 class Authentication(QtGui.QDialog):
-	"""Displays Credit dialog"""
+	"""Displays authentication dialog"""
 	def __init__(self):
 		QtGui.QDialog.__init__(self)
 		self.ui = Ui_authDialog()
 		self.ui.setupUi(self)
-	
+
+class LicenseDisp(QtGui.QDialog):
+	"""Displays license dialog"""
+	def __init__(self):
+		QtGui.QDialog.__init__(self)
+		self.ui = Ui_licenseDialog()
+		self.ui.setupUi(self)
 
 class programFunctions:
 	"""Core functions for registron"""
@@ -87,8 +86,8 @@ function = programFunctions()
 app = QtGui.QApplication(sys.argv)
 about = AboutBox()
 credits = CreditBox()
-appExit = exitBox()
 authentication = Authentication()
+license = LicenseDisp()
 
 if __name__ == '__main__':
 	window = Main()

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Sat Sep 13 14:13:07 2014
+# Created: Sat Sep 13 15:45:49 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,7 +17,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(747, 516)
+        MainWindow.resize(745, 514)
         MainWindow.setMinimumSize(QtCore.QSize(329, 218))
         MainWindow.setMouseTracking(False)
         icon = QtGui.QIcon()
@@ -61,7 +61,7 @@ class Ui_MainWindow(object):
         self.matricInput.setObjectName(_fromUtf8("matricInput"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 747, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 745, 21))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName(_fromUtf8("menuMenu"))
@@ -83,6 +83,8 @@ class Ui_MainWindow(object):
         self.actionCredits.setObjectName(_fromUtf8("actionCredits"))
         self.actionSignIn = QtGui.QAction(MainWindow)
         self.actionSignIn.setObjectName(_fromUtf8("actionSignIn"))
+        self.actionLicense = QtGui.QAction(MainWindow)
+        self.actionLicense.setObjectName(_fromUtf8("actionLicense"))
         self.menuMenu.addAction(self.actionQuit)
         self.menuMenu.addSeparator()
         self.menuAdministrators.addAction(self.actionSignIn)
@@ -91,6 +93,7 @@ class Ui_MainWindow(object):
         self.menuHelp.addSeparator()
         self.menuHelp.addAction(self.actionAbout)
         self.menuHelp.addAction(self.actionCredits)
+        self.menuHelp.addAction(self.actionLicense)
         self.menubar.addAction(self.menuMenu.menuAction())
         self.menubar.addAction(self.menuAdministrators.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
@@ -123,4 +126,5 @@ class Ui_MainWindow(object):
         self.actionCredits.setText(QtGui.QApplication.translate("MainWindow", "Credits", None, QtGui.QApplication.UnicodeUTF8))
         self.actionCredits.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+R", None, QtGui.QApplication.UnicodeUTF8))
         self.actionSignIn.setText(QtGui.QApplication.translate("MainWindow", "Manage Accounts", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionLicense.setText(QtGui.QApplication.translate("MainWindow", "License", None, QtGui.QApplication.UnicodeUTF8))
 
