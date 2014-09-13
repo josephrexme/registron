@@ -4,7 +4,7 @@
 # @website: http://josephrex.me
 # @repository: http://github.com/bl4ckdu5t/registron
 # @twitter: @joerex101
-# @contributors: [James Olanipekun]
+# @contributors: ['James Olanipekun', 'Joseph Rex']
 # # #
 import sys, webbrowser
 from PyQt4 import QtGui, QtCore
@@ -12,6 +12,7 @@ from ui_registron import Ui_MainWindow
 from aboutDialog import Ui_AboutDialog
 from creditDialog import Ui_creditDialog
 from authDialog import Ui_authDialog
+from exitDialog import Ui_exitDialog
 try:
 	import pyttsx
 except ImportError:
@@ -26,15 +27,13 @@ class Main(QtGui.QMainWindow):
 		self.ui.proceedBtn.clicked.connect(self.checkCampusID)
 
 		#Menu Actions
-		self.ui.actionQuit.triggered.connect(self.close)
+		self.ui.actionQuit.triggered.connect(appExit.show)
 		self.ui.actionDocumentation.triggered.connect(self.openGitPage)
 		self.ui.actionAbout.triggered.connect(about.show)
 		self.ui.actionCredits.triggered.connect(credits.show)
-		# self.ui.actionNewWindow.triggered.connect(window.clone)
 		self.ui.actionSignIn.triggered.connect(authentication.show)
 	def greetWelcome(self):
 		function.talk("Welcome to Registron")
-		function.talk("If you are a student, enter your campus ID to proceed from here")
 	def checkCampusID(self):
 		campusID = self.ui.matricInput.toPlainText()
 		if campusID != '':
@@ -59,6 +58,14 @@ class CreditBox(QtGui.QDialog):
 		self.ui = Ui_creditDialog()
 		self.ui.setupUi(self)
 
+class exitBox(QtGui.QDialog):
+	"""Displays Credit dialog"""
+	def __init__(self):
+		QtGui.QDialog.__init__(self)
+		self.ui = Ui_exitDialog()
+		self.ui.setupUi(self)
+		self.ui.yesExit.clicked.connect(self.close)
+
 class Authentication(QtGui.QDialog):
 	"""Displays Credit dialog"""
 	def __init__(self):
@@ -80,11 +87,12 @@ function = programFunctions()
 app = QtGui.QApplication(sys.argv)
 about = AboutBox()
 credits = CreditBox()
+appExit = exitBox()
 authentication = Authentication()
 
 if __name__ == '__main__':
 	window = Main()
 	window.show()
-	window.greetWelcome()
+	QtCore.QTimer.singleShot(0, window.greetWelcome)
 	sys.exit(app.exec_())
 

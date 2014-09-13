@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'registron.ui'
 #
-# Created: Thu Sep 11 11:32:18 2014
+# Created: Sat Sep 13 13:18:08 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -18,14 +18,17 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(749, 518)
+        MainWindow.setMinimumSize(QtCore.QSize(329, 218))
+        MainWindow.setMouseTracking(False)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("../../../../.designer/backup/resources/images/registron.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("resources/images/48x48/registron.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
+        MainWindow.setWindowOpacity(1.0)
         MainWindow.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111);"))
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.registronLabel = QtGui.QLabel(self.centralwidget)
-        self.registronLabel.setGeometry(QtCore.QRect(250, 80, 261, 61))
+        self.registronLabel.setGeometry(QtCore.QRect(250, 50, 261, 81))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("FreeSans"))
         font.setPointSize(36)
@@ -82,9 +85,8 @@ class Ui_MainWindow(object):
         self.actionNewWindow.setObjectName(_fromUtf8("actionNewWindow"))
         self.actionSignIn = QtGui.QAction(MainWindow)
         self.actionSignIn.setObjectName(_fromUtf8("actionSignIn"))
-        self.menuMenu.addAction(self.actionNewWindow)
-        self.menuMenu.addSeparator()
         self.menuMenu.addAction(self.actionQuit)
+        self.menuMenu.addSeparator()
         self.menuAdministrators.addAction(self.actionSignIn)
         self.menuAdministrators.addSeparator()
         self.menuHelp.addAction(self.actionDocumentation)
@@ -101,7 +103,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Registron", None, QtGui.QApplication.UnicodeUTF8))
         self.registronLabel.setToolTip(QtGui.QApplication.translate("MainWindow", "Registron student program", None, QtGui.QApplication.UnicodeUTF8))
-        self.registronLabel.setText(QtGui.QApplication.translate("MainWindow", "Registron", None, QtGui.QApplication.UnicodeUTF8))
+        self.registronLabel.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p>Registron</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.registronDesc.setText(QtGui.QApplication.translate("MainWindow", "Student\'s course registration program", None, QtGui.QApplication.UnicodeUTF8))
         self.enterMatricLabel.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p>Enter your Matriculation Number/Campus ID:</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.proceedBtn.setText(QtGui.QApplication.translate("MainWindow", "Proceed to course registration", None, QtGui.QApplication.UnicodeUTF8))

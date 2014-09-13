@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="rg_">
+    <file>images/48x48/registron.png</file>
+  </qresource>
+</RCC>

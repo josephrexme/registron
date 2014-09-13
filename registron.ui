@@ -11,12 +11,24 @@
     <height>518</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>329</width>
+    <height>218</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
    <string>Registron</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../.designer/backup/resources/images/registron.png</normaloff>../../../../.designer/backup/resources/images/registron.png</iconset>
+    <normaloff>resources/images/48x48/registron.png</normaloff>resources/images/48x48/registron.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
   </property>
   <property name="styleSheet">
    <string notr="true">background: rgb(10, 80, 111);</string>
@@ -26,9 +38,9 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>80</y>
+      <y>50</y>
       <width>261</width>
-      <height>61</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
@@ -47,7 +59,7 @@
      <string notr="true">color: white;</string>
     </property>
     <property name="text">
-     <string>Registron</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Registron&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -143,9 +155,8 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Application</string>
     </property>
-    <addaction name="actionNewWindow"/>
-    <addaction name="separator"/>
     <addaction name="actionQuit"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuAdministrators">
     <property name="title">
