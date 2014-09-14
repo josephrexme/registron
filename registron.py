@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 
+# -*- coding: utf-8 -*-
 # @author: Joseph Rex
 # @website: http://josephrex.me
 # @repository: http://github.com/bl4ckdu5t/registron
@@ -80,7 +80,11 @@ class programFunctions:
 		engine = pyttsx.init()
 		engine.say(speech)
 		engine.runAndWait()
+	def computeHash(original):
+		"""Hashes passwords in MD5 (Message Digest Algorithm 5)"""
+    	return QtCore.QCryptographicHash.hash(original, QtCore.QCryptographicHash.Md5).toHex()
 
+# Core program functions called from this object
 function = programFunctions()
 
 app = QtGui.QApplication(sys.argv)

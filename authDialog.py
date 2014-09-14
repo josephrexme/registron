@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'authDialog.ui'
 #
-# Created: Thu Sep 11 11:57:06 2014
+# Created: Sat Sep 13 20:06:24 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,33 +17,50 @@ except AttributeError:
 class Ui_authDialog(object):
     def setupUi(self, authDialog):
         authDialog.setObjectName(_fromUtf8("authDialog"))
-        authDialog.resize(416, 260)
+        authDialog.resize(336, 239)
         authDialog.setModal(True)
-        self.buttonBox = QtGui.QDialogButtonBox(authDialog)
-        self.buttonBox.setGeometry(QtCore.QRect(60, 220, 341, 32))
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
-        self.adminUser = QtGui.QTextEdit(authDialog)
-        self.adminUser.setGeometry(QtCore.QRect(50, 70, 321, 31))
-        self.adminUser.setObjectName(_fromUtf8("adminUser"))
-        self.adminPass = QtGui.QTextEdit(authDialog)
-        self.adminPass.setGeometry(QtCore.QRect(50, 140, 321, 31))
+        self.formLayoutWidget = QtGui.QWidget(authDialog)
+        self.formLayoutWidget.setGeometry(QtCore.QRect(20, 80, 291, 61))
+        self.formLayoutWidget.setObjectName(_fromUtf8("formLayoutWidget"))
+        self.formLayout = QtGui.QFormLayout(self.formLayoutWidget)
+        self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.ExpandingFieldsGrow)
+        self.formLayout.setMargin(0)
+        self.formLayout.setObjectName(_fromUtf8("formLayout"))
+        self.usernameLabel = QtGui.QLabel(self.formLayoutWidget)
+        self.usernameLabel.setObjectName(_fromUtf8("usernameLabel"))
+        self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.usernameLabel)
+        self.adminUname = QtGui.QLineEdit(self.formLayoutWidget)
+        self.adminUname.setObjectName(_fromUtf8("adminUname"))
+        self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.adminUname)
+        self.adminPass = QtGui.QLineEdit(self.formLayoutWidget)
+        self.adminPass.setEchoMode(QtGui.QLineEdit.Password)
         self.adminPass.setObjectName(_fromUtf8("adminPass"))
-        self.userLabel = QtGui.QLabel(authDialog)
-        self.userLabel.setGeometry(QtCore.QRect(50, 50, 121, 16))
-        self.userLabel.setObjectName(_fromUtf8("userLabel"))
-        self.passLabel = QtGui.QLabel(authDialog)
-        self.passLabel.setGeometry(QtCore.QRect(50, 120, 71, 16))
-        self.passLabel.setObjectName(_fromUtf8("passLabel"))
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.adminPass)
+        self.passwordLabel = QtGui.QLabel(self.formLayoutWidget)
+        self.passwordLabel.setObjectName(_fromUtf8("passwordLabel"))
+        self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.passwordLabel)
+        self.Adminlabel = QtGui.QLabel(authDialog)
+        self.Adminlabel.setGeometry(QtCore.QRect(20, 50, 261, 16))
+        self.Adminlabel.setObjectName(_fromUtf8("Adminlabel"))
+        self.errorDisplay = QtGui.QLabel(authDialog)
+        self.errorDisplay.setGeometry(QtCore.QRect(80, 150, 171, 20))
+        self.errorDisplay.setStyleSheet(_fromUtf8("color: red;"))
+        self.errorDisplay.setText(_fromUtf8(""))
+        self.errorDisplay.setAlignment(QtCore.Qt.AlignCenter)
+        self.errorDisplay.setWordWrap(True)
+        self.errorDisplay.setMargin(5)
+        self.errorDisplay.setObjectName(_fromUtf8("errorDisplay"))
+        self.logBtn = QtGui.QPushButton(authDialog)
+        self.logBtn.setGeometry(QtCore.QRect(120, 160, 89, 23))
+        self.logBtn.setObjectName(_fromUtf8("logBtn"))
 
         self.retranslateUi(authDialog)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), authDialog.accept)
-        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("rejected()")), authDialog.reject)
         QtCore.QMetaObject.connectSlotsByName(authDialog)
 
     def retranslateUi(self, authDialog):
         authDialog.setWindowTitle(QtGui.QApplication.translate("authDialog", "Admin Authentication", None, QtGui.QApplication.UnicodeUTF8))
-        self.userLabel.setText(QtGui.QApplication.translate("authDialog", "Admin Username", None, QtGui.QApplication.UnicodeUTF8))
-        self.passLabel.setText(QtGui.QApplication.translate("authDialog", "Password", None, QtGui.QApplication.UnicodeUTF8))
+        self.usernameLabel.setText(QtGui.QApplication.translate("authDialog", "Username", None, QtGui.QApplication.UnicodeUTF8))
+        self.passwordLabel.setText(QtGui.QApplication.translate("authDialog", "Password", None, QtGui.QApplication.UnicodeUTF8))
+        self.Adminlabel.setText(QtGui.QApplication.translate("authDialog", "Administrator Log In", None, QtGui.QApplication.UnicodeUTF8))
+        self.logBtn.setText(QtGui.QApplication.translate("authDialog", "Log In", None, QtGui.QApplication.UnicodeUTF8))
 

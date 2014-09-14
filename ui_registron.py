@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Sat Sep 13 15:45:49 2014
+# Created: Sat Sep 13 20:05:02 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -28,10 +28,10 @@ class Ui_MainWindow(object):
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.registronLabel = QtGui.QLabel(self.centralwidget)
-        self.registronLabel.setGeometry(QtCore.QRect(250, 50, 261, 81))
+        self.registronLabel.setGeometry(QtCore.QRect(250, 20, 261, 161))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("FreeSans"))
-        font.setPointSize(36)
+        font.setPointSize(25)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
@@ -40,7 +40,7 @@ class Ui_MainWindow(object):
         self.registronLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.registronLabel.setObjectName(_fromUtf8("registronLabel"))
         self.registronDesc = QtGui.QLabel(self.centralwidget)
-        self.registronDesc.setGeometry(QtCore.QRect(220, 140, 331, 20))
+        self.registronDesc.setGeometry(QtCore.QRect(220, 180, 331, 20))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.registronDesc.setFont(font)
@@ -104,7 +104,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Registron", None, QtGui.QApplication.UnicodeUTF8))
         self.registronLabel.setToolTip(QtGui.QApplication.translate("MainWindow", "Registron student program", None, QtGui.QApplication.UnicodeUTF8))
-        self.registronLabel.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p>Registron</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.registronLabel.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p><img src=\":/images/resources/images/80x80/registron.png\"/></p><p>Registron</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.registronDesc.setText(QtGui.QApplication.translate("MainWindow", "Student\'s course registration program", None, QtGui.QApplication.UnicodeUTF8))
         self.enterMatricLabel.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p>Enter your Matriculation Number/Campus ID:</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.proceedBtn.setText(QtGui.QApplication.translate("MainWindow", "Proceed to course registration", None, QtGui.QApplication.UnicodeUTF8))
@@ -128,3 +128,4 @@ class Ui_MainWindow(object):
         self.actionSignIn.setText(QtGui.QApplication.translate("MainWindow", "Manage Accounts", None, QtGui.QApplication.UnicodeUTF8))
         self.actionLicense.setText(QtGui.QApplication.translate("MainWindow", "License", None, QtGui.QApplication.UnicodeUTF8))
 
+import app_rc
