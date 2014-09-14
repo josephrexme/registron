@@ -6,7 +6,7 @@
 # @twitter: @joerex101
 # @contributors: ['James Olanipekun', 'Joseph Rex']
 # # #
-import sys, webbrowser
+import sys, webbrowser, json
 from PyQt4 import QtGui, QtCore
 from ui_registron import Ui_MainWindow
 from aboutDialog import Ui_AboutDialog
@@ -83,6 +83,12 @@ class programFunctions:
 	def computeHash(original):
 		"""Hashes passwords in MD5 (Message Digest Algorithm 5)"""
     	return QtCore.QCryptographicHash.hash(original, QtCore.QCryptographicHash.Md5).toHex()
+    def dict_object(filename):
+		"""Opens json file and converts to python dictionary object"""
+		name = open(filename,'r')
+		json_string = name.read()
+		json_loaded = json.loads(json_string)
+		return json_loaded
 
 # Core program functions called from this object
 function = programFunctions()

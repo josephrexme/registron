@@ -1,1 +1,25 @@
-{"2011135020109":"Alex Wall","2011156820100":"Sandra Alice","2011135020009":"Jacqueline Fernandez","201114803928":"Adams John"}
+{
+
+	"students": {
+		"2011135020109": ["Alex Wall", "computer science", "alex.jpg"],
+		"2011156820100": ["Sandra Alice", "masscom", "sandra.jpg"],
+		"2011135020009": ["Jacqueline Fernandez", "statistics", "jacque.jpg"],
+		"201114803928": ["Adams John", "statistics", "adams.jpg"]
+	},
+	"computer science": {
+		"Digital Electronics",
+		"Algorithms and Flowcharts",
+		"Data Structures",
+		"Networking",
+		"Java Programming",
+		"Ruby Programming",
+		"Python Programming",
+		"Kernel Configuration",
+		"Hardware 205"
+	},
+	"statistics": {
+		"Probability Theory",
+		"Advanced Meridians"
+	}
+
+}
