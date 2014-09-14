@@ -6,7 +6,7 @@
 		"2011135020009": ["Jacqueline Fernandez", "statistics", "jacque.jpg"],
 		"201114803928": ["Adams John", "statistics", "adams.jpg"]
 	},
-	"computer science": {
+	"computer science": [
 		"Digital Electronics",
 		"Algorithms and Flowcharts",
 		"Data Structures",
@@ -16,10 +16,10 @@
 		"Python Programming",
 		"Kernel Configuration",
 		"Hardware 205"
-	},
-	"statistics": {
+	],
+	"statistics": [
 		"Probability Theory",
 		"Advanced Meridians"
-	}
+	]
 
 }
