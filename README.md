@@ -17,6 +17,9 @@ Registron is a speech-based registration program
 
 ```python registron.py``` or ```./registron.py``` in *nix like systems. Windows users can also run this from Idle.
 
+#### Adding student images
+Edit app.qrc resource file and append the location of the image in the ```<file>``` tag. Make sure this image exists and also that that the tags are properly closed. after this, run the following command
+sh```pyrcc4 app.qrc > app_rc.py```
 #### Contributors
 - [Joseph Rex](http://josephrex.me)
 - [James Olanipekun][4]

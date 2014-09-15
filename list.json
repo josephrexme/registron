@@ -1,12 +1,14 @@
 {
 
+	"school": "The Polytechnic of Ibadan",
 	"students": {
-		"2011135020109": ["Alex Wall", "computer science", "alex.jpg"],
+		"2011135020109": ["Alex Wall", "Maths and Statistics", "alex.jpg"],
 		"2011156820100": ["Sandra Alice", "masscom", "sandra.jpg"],
-		"2011135020009": ["Jacqueline Fernandez", "statistics", "jacque.jpg"],
-		"201114803928": ["Adams John", "statistics", "adams.jpg"]
+		"2011135020009": ["Jacqueline Fernandez", "Maths and Statistics", "jacque.jpg"],
+		"2011148039287": ["Adams John", "Maths and Statistics", "adams.jpg"],
+		"2011135020108": ["Joseph Rex", "Computer Science", "joerex.jpg"]
 	},
-	"computer science": [
+	"Computer Science": [
 		"Digital Electronics",
 		"Algorithms and Flowcharts",
 		"Data Structures",
@@ -17,9 +19,15 @@
 		"Kernel Configuration",
 		"Hardware 205"
 	],
-	"statistics": [
+	"Maths and Statistics": [
 		"Probability Theory",
-		"Advanced Meridians"
+		"Advanced Meridians",
+		"Math 101",
+		"Calculus 102"
+	],
+	"masscom": [
+		"Advertising strategies",
+		"Marketing 101"
 	]
 
 }

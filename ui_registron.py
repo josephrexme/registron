@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Sat Sep 13 20:05:02 2014
+# Created: Sun Sep 14 19:24:33 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,6 +17,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.setEnabled(True)
         MainWindow.resize(745, 514)
         MainWindow.setMinimumSize(QtCore.QSize(329, 218))
         MainWindow.setMouseTracking(False)
@@ -59,6 +60,16 @@ class Ui_MainWindow(object):
         self.matricInput.setGeometry(QtCore.QRect(230, 280, 301, 31))
         self.matricInput.setStyleSheet(_fromUtf8("background:white;color: black;"))
         self.matricInput.setObjectName(_fromUtf8("matricInput"))
+        self.invalidID = QtGui.QLabel(self.centralwidget)
+        self.invalidID.setEnabled(True)
+        self.invalidID.setGeometry(QtCore.QRect(620, 0, 121, 71))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.invalidID.setFont(font)
+        self.invalidID.setStyleSheet(_fromUtf8("color: red;"))
+        self.invalidID.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.invalidID.setObjectName(_fromUtf8("invalidID"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 745, 21))
@@ -113,6 +124,7 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'DejaVu Sans\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.invalidID.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p align=\"center\"><img src=\":/images/resources/images/48x48/stop.png\"/></p><p align=\"center\">ACCESS DENIED</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMenu.setTitle(QtGui.QApplication.translate("MainWindow", "Application", None, QtGui.QApplication.UnicodeUTF8))
         self.menuAdministrators.setTitle(QtGui.QApplication.translate("MainWindow", "Administrator", None, QtGui.QApplication.UnicodeUTF8))
         self.menuHelp.setTitle(QtGui.QApplication.translate("MainWindow", "Help", None, QtGui.QApplication.UnicodeUTF8))
