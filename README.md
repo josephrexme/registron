@@ -1,15 +1,30 @@
-Section Separator Styles
+Registron
 =========
 
-A collection of separator styles for horizontally dividing sections on a website. The dividers are created using several techniques, including styling pseudo-elements, using gradients and inserting SVG graphics with responsiveness in mind.
+Registron is a speech-based registration program
 
-[Article on Codrops](http://tympanus.net/codrops/?p=16581)
+#### Build Information
+- [Python 2.7][1]
+- PyQt4
+- Pyuic 4.9.3
+- [Qt Designer 4.8.2][2]
+- [py2exe][3] (For Windows executable bindings)
 
-[Demo](http://tympanus.net/Development/SectionSeparators/)
+#### Third Party Modules
+- Pyttsx (Python Text To Speech)
 
-Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
+> To run from source files directly, switch to the source branch and simply run
 
-Read more here: [License](http://tympanus.net/codrops/licensing/)
+```python registron.py``` or ```./registron.py``` in *nix like systems. Windows users can also run this from Idle.
 
+#### Adding student images
+Edit app.qrc resource file and append the location of the image in the ```<file>``` tag. Make sure this image exists and also that that the tags are properly closed. after this, run the following command
+sh```pyrcc4 app.qrc > app_rc.py```
+#### Contributors
+- [Joseph Rex](http://josephrex.me)
+- [James Olanipekun][4]
 
-[© Codrops 2013](http://www.codrops.com)
+[1]:http://python.org
+[2]:http://qt-project.org
+[3]:http://www.py2exe.org/
+[4]:https://www.google.ca/#q=james+olanipekun
