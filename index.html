@@ -1,67 +1,374 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
-    <title>Registron by bl4ckdu5t</title>
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>Registron</h1>
-        <h2>Student&#39;s speech-based course registration program</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/bl4ckdu5t/registron/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/bl4ckdu5t/registron/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/bl4ckdu5t/registron" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    
-  </body>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Registron</title>
+		<meta name="description" content="Registron is a speech based student registration system">
+		<meta name="keywords" content="registron, software, joseph rex, bl4ckdu5t, python">
+		<meta name="author" content="Joseph Rex">
+		<link rel="shortcut icon" href="images/registron.png">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/demo.css">
+		<link rel="stylesheet" href="css/icons.css">
+		<link rel="stylesheet" href="css/component.css">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/AnimatedBorderMenus/"><span>Previous Demo</span></a>
+				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=16581"><span>Back to the Codrops Article</span></a></span>
+			</div>
+			<header>
+				<h1>Registron <span>Speech-based student registration system</span></h1>	
+			</header>
+			<section class="col-2 ss-style-triangles">
+				<div class="column text">
+					<h2>What is Registron about?</h2>
+					<p>Registron is a speech based registration system. A desktop graphical user interface application with interactive voice
+						communication with its users. Registron allows schools to manage their students and the courses they offer. Also, the students take advantage of its user-friendly environment to register their semester courses.
+					</p>
+					<p class="btons">
+						<a href="https://github.com/bl4ckdu5t/registron/zipball/master"><i class="fa fa-download"></i>
+							Download Zip
+						</a>
+						<a href="https://github.com/bl4ckdu5t/registron/tarball/master"><i class="fa fa-download"></i> Download as .tar.gz</a>
+						<a href="https://github.com/bl4ckdu5t/registron"><i class="fa fa-github"></i> View on GitHub</a>
+					</p>
+				</div>
+				<div class="column">
+					<span class="icon"><img src="images/registron@2x.png" alt="logo"></span>
+				</div>
+			</section>
+			<section class="color">
+				<h2>A light and awesome feel </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-3 ss-style-doublediagonal">
+				<div class="column">
+					<span class="icon icon-home"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-bullhorn"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-blog"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2 ss-style-halfcircle">
+				<div class="column">
+					<span class="icon icon-images"></span>
+				</div>
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+			</section>
+			<section class="color ss-style-bigtriangle">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+				<path d="M0 0 L50 100 L100 0 Z" />
+			</svg>
+			<section class="col-3">
+				<div class="column">
+					<span class="icon icon-camera"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-headphones"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-podcast"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<svg id="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 100 C 20 0 50 0 100 100 Z"/>
+			</svg>
+			<section class="col-2 color ss-style-curvedown">
+				<div class="column">
+					<span class="icon icon-library"></span>
+				</div>
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+			</section>
+			<svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 0 C 50 100 80 100 100 0 Z"/>
+			</svg>
+			<section class="col-2">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-2 color ss-style-multitriangles">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-stack"></span>
+				</div>
+			</section>
+			<section class="col-2">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-2 color ss-style-roundedsplit">
+				<div class="column">
+					<span class="icon icon-location"></span>
+				</div>
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+			</section>
+			<section class="col-3 ss-style-invertedrounded">
+				<div class="column">
+					<span class="icon icon-compass"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-alarm"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-screen"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2 color ss-style-boxes">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-bullhorn"></span>
+				</div>
+			</section>
+			<section>
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-3 color ss-style-zigzag">
+				<div class="column">
+					<span class="icon icon-mobile"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-drawer"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-download"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-upload"></span>
+				</div>
+			</section>
+			<section class="color ss-style-roundedges">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-3 ss-style-slit">
+				<div class="column">
+					<span class="icon icon-laptop"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-library"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-office"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<svg id="bigHalfCircle" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 100 C40 0 60 0 100 100 Z"/>
+			</svg>
+			<section class="col-2 color">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-blog"></span>
+				</div>
+			</section>
+			<svg id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path id="trianglePath1" d="M0 0 L50 100 L100 0 Z" />
+				<path id="trianglePath2" d="M50 100 L100 40 L100 0 Z" />
+			</svg>
+			<section>
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="color col-3 ss-style-inczigzag">
+				<div class="column">
+					<span class="icon icon-images"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-camera"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-headphones"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-compass"></span>
+				</div>
+			</section>
+			<section class="color ss-style-castle">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<svg id="slit" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path id="slitPath2" d="M50 100 C49 80 47 0 40 0 L47 0 Z" />
+				<path id="slitPath3" d="M50 100 C51 80 53 0 60 0 L53 0 Z" />
+				<path id="slitPath1" d="M47 0 L50 100 L53 0 Z" />
+			</svg>
+			<section class="col-3 ss-style-foldedcorner">
+				<div class="column">
+					<span class="icon icon-camera"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-location"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-alarm"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="color col-3 ss-style-dots">
+				<div class="column">
+					<span class="icon icon-library"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-mobile"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-images"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2 color ss-style-doubleline">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-home"></span>
+				</div>
+			</section>
+			<section class="color ss-style-cross">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="color col-3">
+				<div class="column">
+					<span class="icon icon-screen"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-podcast"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-drawer"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<svg id="stamp" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 0 Q 2.5 40 5 0 
+						 Q 7.5 40 10 0
+						 Q 12.5 40 15 0
+						 Q 17.5 40 20 0
+						 Q 22.5 40 25 0
+						 Q 27.5 40 30 0
+						 Q 32.5 40 35 0
+						 Q 37.5 40 40 0
+						 Q 42.5 40 45 0
+						 Q 47.5 40 50 0 
+						 Q 52.5 40 55 0
+						 Q 57.5 40 60 0
+						 Q 62.5 40 65 0
+						 Q 67.5 40 70 0
+						 Q 72.5 40 75 0
+						 Q 77.5 40 80 0
+						 Q 82.5 40 85 0
+						 Q 87.5 40 90 0
+						 Q 92.5 40 95 0
+						 Q 97.5 40 100 0 Z">
+				</path>
+			</svg>
+			<section class="col-2">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-home"></span>
+				</div>
+			</section>
+			<svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M-5 100 Q 0 20 5 100 Z
+						 M0 100 Q 5 0 10 100
+						 M5 100 Q 10 30 15 100
+						 M10 100 Q 15 10 20 100
+						 M15 100 Q 20 30 25 100
+						 M20 100 Q 25 -10 30 100
+						 M25 100 Q 30 10 35 100
+						 M30 100 Q 35 30 40 100
+						 M35 100 Q 40 10 45 100
+						 M40 100 Q 45 50 50 100
+						 M45 100 Q 50 20 55 100
+						 M50 100 Q 55 40 60 100
+						 M55 100 Q 60 60 65 100
+						 M60 100 Q 65 50 70 100
+						 M65 100 Q 70 20 75 100
+						 M70 100 Q 75 45 80 100
+						 M75 100 Q 80 30 85 100
+						 M80 100 Q 85 20 90 100
+						 M85 100 Q 90 50 95 100
+						 M90 100 Q 95 25 100 100
+						 M95 100 Q 100 15 105 100 Z">
+				</path>
+			</svg>
+			<section class="related">
+				<p>Thanks for dropping by</p>
+				<p><a href="http://pages.github.com"><i class="fa fa-github"></i> Hosted on github pages</a></p>
+				<p><a href="http://ostrich-dev.com"><i class="fa fa-ioxhost"></i> Powered by Ostrich-Dev</a></p>
+			</section>
+		</div><!-- /container -->
+	</body>
 </html>
