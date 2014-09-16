@@ -6,7 +6,8 @@
 		"2011156820100": ["Sandra Alice", "masscom", "sandra.jpg"],
 		"2011135020009": ["Jacqueline Fernandez", "Maths and Statistics", "jacque.jpg"],
 		"2011148039287": ["Adams John", "Maths and Statistics", "adams.jpg"],
-		"2011135020108": ["Joseph Rex", "Computer Science", "joerex.jpg"]
+		"2011135020108": ["Joseph Rex", "Computer Science", "joerex.jpg"],
+		"2011145020018": ["Olanipekun James Oluwadamilare", "Computer Science", "james.jpg"]
 	},
 	"Computer Science": [
 		"Digital Electronics",
@@ -23,11 +24,36 @@
 		"Probability Theory",
 		"Advanced Meridians",
 		"Math 101",
-		"Calculus 102"
+		"Calculus 102",
+		"Citizenship",
+		"Use of Library"
 	],
 	"masscom": [
 		"Advertising strategies",
-		"Marketing 101"
+		"Marketing 101",
+		"Statistics",
+		"Journalism",
+		"News Reporting",
+		"Consumer Behaviour"
+	],
+	"Office Technology Management": [
+		"Government",
+		"Psychology",
+		"Record Management",
+		"People's communication skills",
+		"Account",
+		"Keyboarding",
+		"Business Law",
+		"Office Practice",
+		"Shorthand"
+	],
+	"Marketing": [
+		"Consumer Behaviour",
+		"Market Environment",
+		"Market Management",
+		"Account",
+		"Purchasing",
+		"Research Methodology"
 	]
 
 }
