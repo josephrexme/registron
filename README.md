@@ -1,7 +1,7 @@
 Registron
 =========
 
-Registron is a speech-based registration program
+Registron is a speech-based registration program. [read more..][5]
 
 #### Build Information
 - [Python 2.7][1]
@@ -28,3 +28,4 @@ sh```pyrcc4 app.qrc > app_rc.py```
 [2]:http://qt-project.org
 [3]:http://www.py2exe.org/
 [4]:https://www.google.ca/#q=james+olanipekun
+[5]:https://bl4ckdu5t.github.io/registron
