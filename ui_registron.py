@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Thu Sep 18 09:38:21 2014
+# Created: Thu Sep 18 11:05:53 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -60,6 +60,8 @@ class Ui_MainWindow(object):
         self.matricInput = QtGui.QTextEdit(self.centralwidget)
         self.matricInput.setGeometry(QtCore.QRect(230, 280, 301, 31))
         self.matricInput.setStyleSheet(_fromUtf8("background:white;color: black;"))
+        self.matricInput.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.matricInput.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.matricInput.setObjectName(_fromUtf8("matricInput"))
         self.invalidID = QtGui.QLabel(self.centralwidget)
         self.invalidID.setEnabled(True)

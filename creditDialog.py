@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'creditDialog.ui'
 #
-# Created: Thu Sep 11 11:23:36 2014
+# Created: Thu Sep 18 10:30:18 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -22,7 +22,7 @@ class Ui_creditDialog(object):
         self.buttonBox = QtGui.QDialogButtonBox(creditDialog)
         self.buttonBox.setGeometry(QtCore.QRect(60, 220, 341, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.creditInfo = QtGui.QLabel(creditDialog)
         self.creditInfo.setGeometry(QtCore.QRect(20, 50, 371, 141))
@@ -37,5 +37,5 @@ class Ui_creditDialog(object):
 
     def retranslateUi(self, creditDialog):
         creditDialog.setWindowTitle(QtGui.QApplication.translate("creditDialog", "Credits", None, QtGui.QApplication.UnicodeUTF8))
-        self.creditInfo.setText(QtGui.QApplication.translate("creditDialog", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Credits</span></p><p align=\"center\"><span style=\" font-weight:600;\">Project Lead:</span> James Olanipekun</p><p align=\"center\"><span style=\" font-weight:600;\">Project Supervisor:</span> Mr. Fagbolu</p><p align=\"center\"><span style=\" font-weight:600;\">Developer:</span> Joseph Rex</p><p align=\"center\"><span style=\" font-weight:600;\">Development Machine Name:</span> noxiux<br/></p><p><br/></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.creditInfo.setText(QtGui.QApplication.translate("creditDialog", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Credits</span></p><p align=\"center\"><span style=\" font-weight:600;\">Project Lead:</span> James Olanipekun</p><p align=\"center\"><span style=\" font-weight:600;\">Developer:</span> Joseph Rex</p><p align=\"center\"><span style=\" font-weight:600;\">Development Machine Name:</span> noxiux<br/></p><p><br/></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
 

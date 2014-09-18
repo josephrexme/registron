@@ -110,6 +110,7 @@ class courseManage(QtGui.QMainWindow):
 		studentName = databag['students'][id][0]
 		studentDept = databag['students'][id][1]
 		studentAvi = databag['students'][id][2]
+		studentCourses = databag['students'][id][3]
 		self.setWindowTitle('Registron - %s' %studentName)
 		self.ui.studentName.setText(studentName)
 		self.ui.studentID.setText(id)
@@ -118,15 +119,23 @@ class courseManage(QtGui.QMainWindow):
 		avatar = self.ui.studentAvatar
 		avatar.setText('<html><head/><body><p><img src=":/images/resources/images/128x128/%s"/></p></body></html>' % studentAvi)
 		__courses__ = len(databag[studentDept])
+		# Show the student's department courses
 		for x, course in enumerate(databag[studentDept]):
 			getattr(self.ui, 'course{}'.format(x + 1)).setText(' %s' %course)
 			getattr(self.ui, 'course{}'.format(x + 1)).show()
 			getattr(self.ui, 'courseCheck{}'.format(x + 1)).show()
+		# check the courses offered by the student
+		if studentCourses.split(':') != ['']: # check in cases of students with no registered courses
+			for x, registered in enumerate(studentCourses.split(':')):
+				getattr(self.ui, 'courseCheck{}'.format(registered)).setCheckState(2)
 		self.show()
 	def courseUpdates(self):
+		function.talk('Your courses have been updated')
 		self.ui.courseStatus.setText('Courses updated')
 	def logout(self):
 		for x in xrange(1,16,1):
+			# uncheck all checked boxes from session
+			getattr(self.ui, 'courseCheck{}'.format(x)).setCheckState(0)
 			# close course by default
 			getattr(self.ui, 'course{}'.format(x)).hide()
 			# close course checkbox by default

@@ -29,7 +29,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Ok</set>
    </property>
   </widget>
   <widget class="QLabel" name="aboutInfo">
@@ -45,7 +45,7 @@
     <string notr="true">color:white;</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;About Registron&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Registron is a speech based student registration system.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;It uses the Python pyttsx module for providing a voice.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Graphical Interface built with Qt4&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;hosted at: https://github.com/bl4ckdu5t/registron&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;© 2014 ostrich-dev works&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;About Registron&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Registron is a speech based student registration system.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;It uses the Python pyttsx module for providing a voice.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Graphical Interface built with Qt4&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Website: https://bl4ckdu5t.github.io/registron&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;© 2014 ostrich-dev works&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

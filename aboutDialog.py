@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'aboutDialog.ui'
 #
-# Created: Thu Sep 11 03:41:10 2014
+# Created: Thu Sep 18 10:30:16 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -22,7 +22,7 @@ class Ui_AboutDialog(object):
         self.buttonBox = QtGui.QDialogButtonBox(AboutDialog)
         self.buttonBox.setGeometry(QtCore.QRect(60, 220, 341, 32))
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.aboutInfo = QtGui.QLabel(AboutDialog)
         self.aboutInfo.setGeometry(QtCore.QRect(20, 50, 371, 141))
@@ -37,5 +37,5 @@ class Ui_AboutDialog(object):
 
     def retranslateUi(self, AboutDialog):
         AboutDialog.setWindowTitle(QtGui.QApplication.translate("AboutDialog", "About Registron", None, QtGui.QApplication.UnicodeUTF8))
-        self.aboutInfo.setText(QtGui.QApplication.translate("AboutDialog", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">About Registron</span></p><p align=\"center\">Registron is a speech based student registration system.</p><p align=\"center\">It uses the Python pyttsx module for providing a voice.</p><p align=\"center\">Graphical Interface built with Qt4</p><p align=\"center\">hosted at: https://github.com/bl4ckdu5t/registron</p><p align=\"center\">© 2014 ostrich-dev works<br/></p><p><br/></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+        self.aboutInfo.setText(QtGui.QApplication.translate("AboutDialog", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">About Registron</span></p><p align=\"center\">Registron is a speech based student registration system.</p><p align=\"center\">It uses the Python pyttsx module for providing a voice.</p><p align=\"center\">Graphical Interface built with Qt4</p><p align=\"center\">Website: https://bl4ckdu5t.github.io/registron</p><p align=\"center\">© 2014 ostrich-dev works<br/></p><p><br/></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
 
