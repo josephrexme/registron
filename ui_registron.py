@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Sun Sep 14 19:24:33 2014
+# Created: Thu Sep 18 09:38:21 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -55,6 +55,7 @@ class Ui_MainWindow(object):
         self.enterMatricLabel.setObjectName(_fromUtf8("enterMatricLabel"))
         self.proceedBtn = QtGui.QPushButton(self.centralwidget)
         self.proceedBtn.setGeometry(QtCore.QRect(270, 330, 231, 41))
+        self.proceedBtn.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111); color: white;"))
         self.proceedBtn.setObjectName(_fromUtf8("proceedBtn"))
         self.matricInput = QtGui.QTextEdit(self.centralwidget)
         self.matricInput.setGeometry(QtCore.QRect(230, 280, 301, 31))
@@ -62,7 +63,7 @@ class Ui_MainWindow(object):
         self.matricInput.setObjectName(_fromUtf8("matricInput"))
         self.invalidID = QtGui.QLabel(self.centralwidget)
         self.invalidID.setEnabled(True)
-        self.invalidID.setGeometry(QtCore.QRect(620, 0, 121, 71))
+        self.invalidID.setGeometry(QtCore.QRect(620, -10, 121, 111))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
