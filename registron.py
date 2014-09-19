@@ -14,6 +14,7 @@ from creditDialog import Ui_creditDialog
 from authDialog import Ui_authDialog
 from licenseDialog import Ui_licenseDialog
 from studentWindow import Ui_studentWindow
+from adminArea import Ui_adminWindow
 try:
 	import pyttsx
 except ImportError:
@@ -75,6 +76,21 @@ class Authentication(QtGui.QDialog):
 		QtGui.QDialog.__init__(self)
 		self.ui = Ui_authDialog()
 		self.ui.setupUi(self)
+		self.ui.authError.hide()
+		self.ui.logBtn.clicked.connect(self.verify)
+	def verify(self):
+		__user__ = str(self.ui.adminUname.text())
+		__pass__ = str(self.ui.adminPass.text())
+		databag = function.dict_object('data.json')
+		__spass__ = databag['auth']
+		if __user__ == 'admin' and function.computeHash(__pass__) == __spass__:
+			self.ui.authError.hide()
+			self.close()
+			window.hide()
+			administration.show()
+		else:
+			function.talk("Invalid authentication")
+			self.ui.authError.show()
 
 class LicenseDisp(QtGui.QDialog):
 	"""Displays license dialog"""
@@ -145,6 +161,25 @@ class courseManage(QtGui.QMainWindow):
 		self.hide()
 		window.show()
 
+class administrationView(QtGui.QMainWindow):
+	"""Displays administrator window"""
+	def __init__(self):
+		QtGui.QMainWindow.__init__(self)
+		self.ui = Ui_adminWindow()
+		self.ui.setupUi(self)
+		self.setGeometry(300, 100, 750, 520)
+
+		#Menu Actions
+		self.ui.actionQuit.triggered.connect(self.close)
+		self.ui.actionDocumentation.triggered.connect(function.openGitPage)
+		self.ui.actionAbout.triggered.connect(about.show)
+		self.ui.actionCredits.triggered.connect(credits.show)
+		self.ui.actionLicense.triggered.connect(license.show)
+		self.ui.actionAdmin_Logout.triggered.connect(self.closeAdmin)
+	def closeAdmin(self):
+		self.hide()
+		window.show()
+
 class programFunctions:
 	"""Core functions for registron"""
 	def talk(self, speech):
@@ -173,6 +208,7 @@ credits = CreditBox()
 authentication = Authentication()
 license = LicenseDisp()
 manageCourse = courseManage()
+administration = administrationView()
 window = Main()
 
 if __name__ == '__main__':

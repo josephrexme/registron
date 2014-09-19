@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'authDialog.ui'
 #
-# Created: Sat Sep 13 20:06:24 2014
+# Created: Fri Sep 19 12:58:12 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -53,6 +53,11 @@ class Ui_authDialog(object):
         self.logBtn = QtGui.QPushButton(authDialog)
         self.logBtn.setGeometry(QtCore.QRect(120, 160, 89, 23))
         self.logBtn.setObjectName(_fromUtf8("logBtn"))
+        self.authError = QtGui.QLabel(authDialog)
+        self.authError.setGeometry(QtCore.QRect(10, 200, 311, 21))
+        self.authError.setStyleSheet(_fromUtf8("color: red;"))
+        self.authError.setAlignment(QtCore.Qt.AlignCenter)
+        self.authError.setObjectName(_fromUtf8("authError"))
 
         self.retranslateUi(authDialog)
         QtCore.QMetaObject.connectSlotsByName(authDialog)
@@ -63,4 +68,5 @@ class Ui_authDialog(object):
         self.passwordLabel.setText(QtGui.QApplication.translate("authDialog", "Password", None, QtGui.QApplication.UnicodeUTF8))
         self.Adminlabel.setText(QtGui.QApplication.translate("authDialog", "Administrator Log In", None, QtGui.QApplication.UnicodeUTF8))
         self.logBtn.setText(QtGui.QApplication.translate("authDialog", "Log In", None, QtGui.QApplication.UnicodeUTF8))
+        self.authError.setText(QtGui.QApplication.translate("authDialog", "Wrong Authentication Credentials", None, QtGui.QApplication.UnicodeUTF8))
 

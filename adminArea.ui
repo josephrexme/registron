@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <author>Joseph Rex</author>
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>adminWindow</class>
+ <widget class="QMainWindow" name="adminWindow">
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -84,7 +84,7 @@
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="schoolNameLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -103,7 +103,7 @@
        <string>School Name:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="addStudentLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -122,7 +122,7 @@
        <string>Add Student:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="surnameLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -135,7 +135,7 @@
        <string>Surname:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="othernamesLabel">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -183,7 +183,7 @@
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
      </widget>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="studentsDeptLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -196,7 +196,7 @@
        <string>Student's Department:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="imageDropLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -241,7 +241,7 @@
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="schoolNameBtn">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -254,7 +254,7 @@
        <string notr="true">background: rgb(10, 80, 111);</string>
       </property>
       <property name="text">
-       <string>Add School Name</string>
+       <string>Save School Name</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_2">
@@ -291,17 +291,147 @@
        <string>Click on student ID to edit profile</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser">
+     <widget class="QScrollArea" name="scrollArea">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>231</width>
-        <height>371</height>
+        <width>201</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>197</width>
+         <height>357</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>40</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Student Name:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>451</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:white;</string>
+       <string notr="true">background: white;color:black;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>180</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Department:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_6">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>200</y>
+        <width>451</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;color:black;</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_7">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>270</y>
+        <width>451</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;color:black;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>250</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Image file name:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>320</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111); color: white;</string>
+      </property>
+      <property name="text">
+       <string>Update Record</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_9">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>130</y>
+        <width>451</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: white;color:black;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>110</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Campus ID:</string>
       </property>
      </widget>
     </widget>
@@ -312,6 +442,53 @@
      <attribute name="toolTip">
       <string>Add and Edit School Courses</string>
      </attribute>
+    </widget>
+    <widget class="QWidget" name="settingsTab">
+     <attribute name="title">
+      <string>Setttings</string>
+     </attribute>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>141</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Change Password:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>681</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:white; color: black;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>80</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);color:white;</string>
+      </property>
+      <property name="text">
+       <string>Update Password</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -328,15 +505,14 @@
     <property name="title">
      <string>Application</string>
     </property>
-    <addaction name="actionAdmin_Logout"/>
-    <addaction name="separator"/>
     <addaction name="actionQuit"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuAdministrators">
     <property name="title">
      <string>Administrator</string>
     </property>
-    <addaction name="actionSignIn"/>
+    <addaction name="actionAdmin_Logout"/>
     <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
