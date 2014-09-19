@@ -328,8 +328,9 @@
     <property name="title">
      <string>Application</string>
     </property>
-    <addaction name="actionQuit"/>
+    <addaction name="actionAdmin_Logout"/>
     <addaction name="separator"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuAdministrators">
     <property name="title">
@@ -396,6 +397,11 @@
   <action name="actionLicense">
    <property name="text">
     <string>License</string>
+   </property>
+  </action>
+  <action name="actionAdmin_Logout">
+   <property name="text">
+    <string>Admin Logout</string>
    </property>
   </action>
  </widget>

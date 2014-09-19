@@ -1,6 +1,7 @@
 {
 
-	"school": "The Polytechnic of Ibadan",
+	"school": "The Ibarapa polytechnic",
+	"auth": "5f4dcc3b5aa765d61d8327deb882cf99",
 	"students": {
 		"2011135020109": ["Alex Wall", "Maths and Statistics", "alex.jpg", "1:2:3:6"],
 		"2011156820100": ["Sandra Alice", "masscom", "sandra.jpg", "1:2:3:4:5"],

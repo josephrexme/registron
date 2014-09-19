@@ -687,7 +687,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>verify checked courses</string>
+     <string>Save Courses</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="courseCheck1">

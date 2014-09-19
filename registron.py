@@ -39,7 +39,7 @@ class Main(QtGui.QMainWindow):
 	def greetWelcome(self):
 		function.talk("Welcome to Registron")
 	def checkCampusID(self):
-		databag = function.dict_object('list.json')
+		databag = function.dict_object('data.json')
 		campusID = str(self.ui.matricInput.toPlainText())
 		if campusID != '':
 			if databag['students'].has_key(campusID):
@@ -106,7 +106,7 @@ class courseManage(QtGui.QMainWindow):
 			# close course checkbox by default
 			getattr(self.ui, 'courseCheck{}'.format(x)).hide()
 	def grab(self, id):
-		databag = function.dict_object('list.json')
+		databag = function.dict_object('data.json')
 		studentName = databag['students'][id][0]
 		studentDept = databag['students'][id][1]
 		studentAvi = databag['students'][id][2]
@@ -133,6 +133,8 @@ class courseManage(QtGui.QMainWindow):
 		function.talk('Your courses have been updated')
 		self.ui.courseStatus.setText('Courses updated')
 	def logout(self):
+		# say goodbye
+		function.talk("Logging out")
 		for x in xrange(1,16,1):
 			# uncheck all checked boxes from session
 			getattr(self.ui, 'courseCheck{}'.format(x)).setCheckState(0)

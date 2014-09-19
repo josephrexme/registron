@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'studentwindow.ui'
 #
-# Created: Mon Sep 15 07:38:26 2014
+# Created: Fri Sep 19 01:42:31 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -375,7 +375,7 @@ class Ui_studentWindow(object):
         self.course13.setText(QtGui.QApplication.translate("studentWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
         self.course14.setText(QtGui.QApplication.translate("studentWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
         self.course15.setText(QtGui.QApplication.translate("studentWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
-        self.verifyBtn.setText(QtGui.QApplication.translate("studentWindow", "verify checked courses", None, QtGui.QApplication.UnicodeUTF8))
+        self.verifyBtn.setText(QtGui.QApplication.translate("studentWindow", "Save Courses", None, QtGui.QApplication.UnicodeUTF8))
         self.courseStatus.setText(QtGui.QApplication.translate("studentWindow", "Check the courses you want to offer this semester", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMenu.setTitle(QtGui.QApplication.translate("studentWindow", "Application", None, QtGui.QApplication.UnicodeUTF8))
         self.menuAdministrators.setTitle(QtGui.QApplication.translate("studentWindow", "Administrator", None, QtGui.QApplication.UnicodeUTF8))
