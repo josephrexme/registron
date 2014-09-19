@@ -29,6 +29,7 @@ Edit app.qrc resource file and append the location of the image in the ```<file>
 
 #### Default Admin Credentials
 > username: admin, password: password
+
 #### Contributors
 - [Joseph Rex](http://josephrex.me)
 - [James Olanipekun][4]
