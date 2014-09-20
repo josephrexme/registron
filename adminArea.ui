@@ -46,6 +46,11 @@
       <height>451</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color:white;background: rgb(10, 80, 111);</string>
     </property>
@@ -73,6 +78,11 @@
         <width>681</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background: white;color:black;</string>
@@ -157,6 +167,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">background:white;color:black;</string>
       </property>
@@ -175,6 +190,11 @@
         <width>341</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background:white;color:black;</string>
@@ -218,6 +238,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">background:white;color:black;</string>
       </property>
@@ -233,6 +258,11 @@
         <width>681</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background:white;color:black;</string>
@@ -336,6 +366,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">background: white;color:black;</string>
       </property>
@@ -362,6 +397,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true">background: white;color:black;</string>
       </property>
@@ -374,6 +414,11 @@
         <width>451</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background: white;color:black;</string>
@@ -416,6 +461,11 @@
         <width>451</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background: white;color:black;</string>
@@ -468,6 +518,11 @@
         <width>681</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background:white; color: black;</string>

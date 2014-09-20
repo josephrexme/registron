@@ -87,6 +87,7 @@ class Authentication(QtGui.QDialog):
 			self.ui.authError.hide()
 			self.close()
 			window.hide()
+			manageCourse.hide()
 			administration.show()
 		else:
 			function.talk("Invalid authentication")
@@ -134,9 +135,9 @@ class courseManage(QtGui.QMainWindow):
 		self.ui.schoolName.setText(databag['school'])
 		avatar = self.ui.studentAvatar
 		avatar.setText('<html><head/><body><p><img src=":/images/resources/images/128x128/%s"/></p></body></html>' % studentAvi)
-		__courses__ = len(databag[studentDept])
+		__courses__ = len(databag['departments'][studentDept])
 		# Show the student's department courses
-		for x, course in enumerate(databag[studentDept]):
+		for x, course in enumerate(databag['departments'][studentDept]):
 			getattr(self.ui, 'course{}'.format(x + 1)).setText(' %s' %course)
 			getattr(self.ui, 'course{}'.format(x + 1)).show()
 			getattr(self.ui, 'courseCheck{}'.format(x + 1)).show()
@@ -146,6 +147,17 @@ class courseManage(QtGui.QMainWindow):
 				getattr(self.ui, 'courseCheck{}'.format(registered)).setCheckState(2)
 		self.show()
 	def courseUpdates(self):
+		offered = ''
+		for x in xrange(1,16,1):
+			if getattr(self.ui, 'courseCheck{}'.format(x)).checkState() == 2:
+				offered += str(x) + ':'
+		offered = offered.rstrip(':')
+		studentIndex = str(self.ui.studentID.text())
+		databag = function.dict_object('data.json')
+		databag['students'][studentIndex][3] = offered
+		bundle = json.dumps(databag)
+		handle = open('data.json', 'w')
+		handle.write(bundle)
 		function.talk('Your courses have been updated')
 		self.ui.courseStatus.setText('Courses updated')
 	def logout(self):
@@ -158,6 +170,7 @@ class courseManage(QtGui.QMainWindow):
 			getattr(self.ui, 'course{}'.format(x)).hide()
 			# close course checkbox by default
 			getattr(self.ui, 'courseCheck{}'.format(x)).hide()
+		self.ui.courseStatus.setText('Check the courses you want to offer this semester')
 		self.hide()
 		window.show()
 
@@ -168,6 +181,10 @@ class administrationView(QtGui.QMainWindow):
 		self.ui = Ui_adminWindow()
 		self.ui.setupUi(self)
 		self.setGeometry(300, 100, 750, 520)
+		databag = function.dict_object('data.json')
+		school = databag['school']
+		self.ui.schoolName.setText(school)
+		self.ui.schoolNameBtn.clicked.connect(self.addSchool)
 
 		#Menu Actions
 		self.ui.actionQuit.triggered.connect(self.close)
@@ -176,6 +193,11 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.actionCredits.triggered.connect(credits.show)
 		self.ui.actionLicense.triggered.connect(license.show)
 		self.ui.actionAdmin_Logout.triggered.connect(self.closeAdmin)
+	def addSchool(self):
+		databag = function.dict_object('data.json')
+		databag['school'] = str(self.ui.schoolName.toPlainText())
+		handle = open('data.json', 'w')
+		handle.write(json.dumps(databag))
 	def closeAdmin(self):
 		self.hide()
 		window.show()
