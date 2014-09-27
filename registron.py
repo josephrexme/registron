@@ -41,7 +41,7 @@ class Main(QtGui.QMainWindow):
 		function.talk("Welcome to Registron")
 	def checkCampusID(self):
 		databag = function.dict_object('data.json')
-		campusID = str(self.ui.matricInput.toPlainText())
+		campusID = str(self.ui.matricInput.text())
 		if campusID != '':
 			if databag['students'].has_key(campusID):
 				self.ui.invalidID.hide()
@@ -134,7 +134,7 @@ class courseManage(QtGui.QMainWindow):
 		self.ui.studentDept.setText(studentDept)
 		self.ui.schoolName.setText(databag['school'])
 		avatar = self.ui.studentAvatar
-		avatar.setText('<html><head/><body><p><img src=":/images/resources/images/128x128/%s"/></p></body></html>' % studentAvi)
+		avatar.setPixmap(QtGui.QPixmap('resources/images/128x128/%s' % studentAvi))
 		__courses__ = len(databag['departments'][studentDept])
 		# Show the student's department courses
 		for x, course in enumerate(databag['departments'][studentDept]):
@@ -181,11 +181,23 @@ class administrationView(QtGui.QMainWindow):
 		self.ui = Ui_adminWindow()
 		self.ui.setupUi(self)
 		self.setGeometry(300, 100, 750, 520)
-		databag = function.dict_object('data.json')
-		school = databag['school']
+		self.ui.schoolSaved.hide()
+		self.ui.passwordChanged.hide()
+		self.databag = function.dict_object('data.json')
+		school = self.databag['school']
 		self.ui.schoolName.setText(school)
 		self.ui.schoolNameBtn.clicked.connect(self.addSchool)
+		self.ui.changePassBtn.clicked.connect(self.changePass)
 
+		# Student ID Listings
+		for x, id in enumerate(self.databag['students']):
+			pass #print x, id
+		self.studentIndex1 = QtGui.QLabel(self.ui.scrollAreaWidgetContents)
+		self.studentIndex1.setGeometry(QtCore.QRect(0, 0, 195, 30))
+		self.studentIndex1.setFrameShape(QtGui.QFrame.Panel)
+		self.studentIndex1.setStyleSheet('color: rgb(0,0,0);background: rgb(255, 255, 255)')
+		self.studentIndex1.setText("I am numbra one")
+		# self.studentIndex1.setObjectName(QtCore.QString.fromUtf8("studentIndex1"))
 		#Menu Actions
 		self.ui.actionQuit.triggered.connect(self.close)
 		self.ui.actionDocumentation.triggered.connect(function.openGitPage)
@@ -193,11 +205,29 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.actionCredits.triggered.connect(credits.show)
 		self.ui.actionLicense.triggered.connect(license.show)
 		self.ui.actionAdmin_Logout.triggered.connect(self.closeAdmin)
+
 	def addSchool(self):
-		databag = function.dict_object('data.json')
-		databag['school'] = str(self.ui.schoolName.toPlainText())
+		self.databag['school'] = str(self.ui.schoolName.toPlainText())
 		handle = open('data.json', 'w')
-		handle.write(json.dumps(databag))
+		handle.write(json.dumps(self.databag))
+		self.ui.schoolSaved.show()
+		QtCore.QTimer.singleShot(1000 * 60 * 5, self.ui.schoolSaved.hide) # 5 minutes
+		function.talk('School name saved')
+	def changePass(self):
+		"""Changes administrator's password"""
+		newpass = str( self.ui.passwordChange.text() )
+		if newpass == '':
+			self.ui.passwordChanged.setText('Password Field cannot be left blank')
+			self.ui.passwordChanged.show()
+			function.talk('password empty!')
+		else:
+			self.databag['auth'] = str(function.computeHash(newpass))
+			f = open('data.json', 'w')
+			f.write(json.dumps(self.databag))
+			self.ui.passwordChanged.setText('Password Updated')
+			self.ui.passwordChanged.show()
+			self.ui.passwordChange.clear()
+			function.talk('password updated')
 	def closeAdmin(self):
 		self.hide()
 		window.show()
@@ -235,6 +265,6 @@ window = Main()
 
 if __name__ == '__main__':
 	window.show()
-	QtCore.QTimer.singleShot(0, window.greetWelcome)
+	QtCore.QTimer.singleShot(500, window.greetWelcome) # Greet after 500 milliseconds
 	sys.exit(app.exec_())
 

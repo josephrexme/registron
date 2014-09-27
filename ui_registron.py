@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Thu Sep 18 11:05:53 2014
+# Created: Tue Sep 23 12:44:44 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -57,12 +57,6 @@ class Ui_MainWindow(object):
         self.proceedBtn.setGeometry(QtCore.QRect(270, 330, 231, 41))
         self.proceedBtn.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111); color: white;"))
         self.proceedBtn.setObjectName(_fromUtf8("proceedBtn"))
-        self.matricInput = QtGui.QTextEdit(self.centralwidget)
-        self.matricInput.setGeometry(QtCore.QRect(230, 280, 301, 31))
-        self.matricInput.setStyleSheet(_fromUtf8("background:white;color: black;"))
-        self.matricInput.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.matricInput.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.matricInput.setObjectName(_fromUtf8("matricInput"))
         self.invalidID = QtGui.QLabel(self.centralwidget)
         self.invalidID.setEnabled(True)
         self.invalidID.setGeometry(QtCore.QRect(620, -10, 121, 111))
@@ -73,6 +67,11 @@ class Ui_MainWindow(object):
         self.invalidID.setStyleSheet(_fromUtf8("color: red;"))
         self.invalidID.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.invalidID.setObjectName(_fromUtf8("invalidID"))
+        self.matricInput = QtGui.QLineEdit(self.centralwidget)
+        self.matricInput.setGeometry(QtCore.QRect(230, 280, 301, 31))
+        self.matricInput.setStyleSheet(_fromUtf8("background:white;color: black;"))
+        self.matricInput.setAlignment(QtCore.Qt.AlignCenter)
+        self.matricInput.setObjectName(_fromUtf8("matricInput"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 745, 21))
@@ -122,11 +121,6 @@ class Ui_MainWindow(object):
         self.registronDesc.setText(QtGui.QApplication.translate("MainWindow", "Student\'s course registration program", None, QtGui.QApplication.UnicodeUTF8))
         self.enterMatricLabel.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p>Enter your Matriculation Number/Campus ID:</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.proceedBtn.setText(QtGui.QApplication.translate("MainWindow", "Proceed to course registration", None, QtGui.QApplication.UnicodeUTF8))
-        self.matricInput.setHtml(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'DejaVu Sans\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.invalidID.setText(QtGui.QApplication.translate("MainWindow", "<html><head/><body><p align=\"center\"><img src=\":/images/resources/images/48x48/stop.png\"/></p><p align=\"center\">ACCESS DENIED</p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMenu.setTitle(QtGui.QApplication.translate("MainWindow", "Application", None, QtGui.QApplication.UnicodeUTF8))
         self.menuAdministrators.setTitle(QtGui.QApplication.translate("MainWindow", "Administrator", None, QtGui.QApplication.UnicodeUTF8))
