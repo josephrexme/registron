@@ -5,8 +5,8 @@ Documentation for Registron
 - [Program utils module](#chapter3)
 - [Using Qt designer with pyrcc and pyuic](#chapter4)
 - [The program logic](#chapter5)
-- [Creating the windows exe with py2exe](#chapter5)
-- [References](#chapter6)
+- [Creating the windows exe with py2exe](#chapter6)
+- [References](#chapter7)
 
 <h3 id="chapter1" name="chapter1">Registron as a python program</h3>
 Registron is a student registration program built in python 2.7
@@ -122,9 +122,20 @@ code and a flow chart.
 
 <img src="http://i.imgur.com/ELyV6AK.png" alt="Registron Flowchart">
 
-<h3 id="chapter6" name="chapter6">References</h3>
+<h3 id="chapter6" name="chapter6">Creating the windows exe with py2exe</h3>
+This part is coming soon...
+<h3 id="chapter7" name="chapter7">References</h3>
 Some useful references:
 - [http://pyttsx.readthedocs.org/en/latest/](http://pyttsx.readthedocs.org/en/latest/)
 - [https://github.com/parente/pyttsx](https://github.com/parente/pyttsx)
+- [http://pyqt.sourceforge.net/Docs/PyQt4/designer.html](http://pyqt.sourceforge.net/Docs/PyQt4/designer.html)
+- [https://wiki.python.org/moin/PyQt4](https://wiki.python.org/moin/PyQt4)
+- [http://josephrex.me/getting-started-with-gui-development-in-python/](http://josephrex.me/getting-started-with-gui-development-in-python/)
+- [http://pyqt.sourceforge.net/Docs/PyQt4/classes.html](http://pyqt.sourceforge.net/Docs/PyQt4/classes.html)
+- [http://doc.qt.digia.com/4.6/index.html](http://doc.qt.digia.com/4.6/index.html)
+- [http://www.riverbankcomputing.com/software/sip/intro](http://www.riverbankcomputing.com/software/sip/intro)
+- [http://pythonkit.com/PyQt-pdf.html](http://pythonkit.com/PyQt-pdf.html)
+- [http://zetcode.com/gui/pyqt4/](http://zetcode.com/gui/pyqt4/)
+- [http://pyqt.sourceforge.net/Docs/PyQt4/designer.html](http://pyqt.sourceforge.net/Docs/PyQt4/designer.html)
 
 [1]:https://github.com/parente/pyttsx
