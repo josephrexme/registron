@@ -3,10 +3,10 @@
 # @author: Joseph Rex
 # @website: http://josephrex.me
 # @repository: http://github.com/bl4ckdu5t/registron
-# @twitter: @joerex101
-# @contributors: ['James Olanipekun', 'Joseph Rex']
+# @twitter: joerex101
 # # #
-import sys, webbrowser, json, string
+import sys, json, string
+import utils as function
 from PyQt4 import QtGui, QtCore
 from ui_registron import Ui_MainWindow
 from aboutDialog import Ui_AboutDialog
@@ -15,10 +15,6 @@ from authDialog import Ui_authDialog
 from licenseDialog import Ui_licenseDialog
 from studentWindow import Ui_studentWindow
 from adminArea import Ui_adminWindow
-try:
-	import pyttsx
-except ImportError:
-	raise ImportError, "pyttsx module is required for speech features of registron"
 
 class Main(QtGui.QMainWindow):
 	"""Main class for registron"""
@@ -156,8 +152,8 @@ class courseManage(QtGui.QMainWindow):
 		databag = function.dict_object('data.json')
 		databag['students'][studentIndex][3] = offered
 		bundle = json.dumps(databag)
-		handle = open('data.json', 'w')
-		handle.write(bundle)
+		f = open('data.json', 'w')
+		f.write(bundle)
 		function.talk('Your courses have been updated')
 		self.ui.courseStatus.setText('Courses updated')
 	def logout(self):
@@ -188,6 +184,7 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.schoolName.setText(school)
 		self.ui.schoolNameBtn.clicked.connect(self.addSchool)
 		self.ui.changePassBtn.clicked.connect(self.changePass)
+		self.ui.addDeptBtn.clicked.connect(self.addDepartment)
 
 		# Student ID Listings
 		for x, id in enumerate(self.databag['students']):
@@ -197,7 +194,12 @@ class administrationView(QtGui.QMainWindow):
 		self.studentIndex1.setFrameShape(QtGui.QFrame.Panel)
 		self.studentIndex1.setStyleSheet('color: rgb(0,0,0);background: rgb(255, 255, 255)')
 		self.studentIndex1.setText("I am numbra one")
-		# self.studentIndex1.setObjectName(QtCore.QString.fromUtf8("studentIndex1"))
+		self.studentIndex1.setObjectName(QtCore.QString.fromUtf8("studentIndex1"))
+		# Departments Combo Box
+		for x, department in enumerate(self.databag['departments']):
+			self.ui.courseAddDeptList.addItem('')
+			self.ui.courseAddDeptList.setItemText(x, department)
+		self.ui.addCourseBtn.clicked.connect(self.addCourses)
 		#Menu Actions
 		self.ui.actionQuit.triggered.connect(self.close)
 		self.ui.actionDocumentation.triggered.connect(function.openGitPage)
@@ -207,12 +209,36 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.actionAdmin_Logout.triggered.connect(self.closeAdmin)
 
 	def addSchool(self):
-		self.databag['school'] = str(self.ui.schoolName.toPlainText())
-		handle = open('data.json', 'w')
-		handle.write(json.dumps(self.databag))
+		self.databag['school'] = str( self.ui.schoolName.text() )
+		f = open('data.json', 'w')
+		f.write(json.dumps(self.databag))
 		self.ui.schoolSaved.show()
-		QtCore.QTimer.singleShot(1000 * 60 * 5, self.ui.schoolSaved.hide) # 5 minutes
+		QtCore.QTimer.singleShot(1000 * 30, self.ui.schoolSaved.hide)
 		function.talk('School name saved')
+	def addDepartment(self):
+		deptInput = str( self.ui.addDept.text() )
+		if deptInput == '':
+			self.ui.addDeptNotice.setText("Empty Input")
+			function.talk('Empty Input')
+		else:
+			self.databag['departments'][deptInput] = []
+			f = open('data.json', 'w')
+			f.write(json.dumps(self.databag))
+			self.ui.addDeptNotice.setText('Department Saved')
+			self.ui.addDept.clear()
+			# self.ui.courseAddDeptList.repaint()
+			function.talk("Department saved")
+	def addCourses(self):
+		courseName = str( self.ui.addCourse.text() )
+		if courseName == '':
+			function.talk('Empty Input')
+		else:
+			selectedDepartment = str( self.ui.courseAddDeptList.currentText() )
+			self.databag['departments'][selectedDepartment].append(courseName)
+			f = open('data.json', 'w')
+			f.write(json.dumps(self.databag))
+			self.ui.addCourse.clear()
+			function.talk("Course added")
 	def changePass(self):
 		"""Changes administrator's password"""
 		newpass = str( self.ui.passwordChange.text() )
@@ -231,28 +257,6 @@ class administrationView(QtGui.QMainWindow):
 	def closeAdmin(self):
 		self.hide()
 		window.show()
-
-class programFunctions:
-	"""Core functions for registron"""
-	def talk(self, speech):
-		"""Uses pyttsx module for speech"""
-		engine = pyttsx.init()
-		engine.say(speech)
-		engine.runAndWait()
-	def computeHash(self, original):
-		"""Hashes passwords in MD5 (Message Digest Algorithm 5)"""
-		return QtCore.QCryptographicHash.hash(original, QtCore.QCryptographicHash.Md5).toHex()
-	def dict_object(self, filename):
-		"""Opens json file and converts to python dictionary object"""
-		name = open(filename,'r')
-		json_string = name.read()
-		json_loaded = json.loads(json_string)
-		return json_loaded
-	def openGitPage(self):
-		webbrowser.open('https://github.com/bl4ckdu5t/registron')
-
-# Core program functions called from this object
-function = programFunctions()
 
 app = QtGui.QApplication(sys.argv)
 about = AboutBox()
