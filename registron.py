@@ -128,9 +128,17 @@ class courseManage(QtGui.QMainWindow):
 		self.ui.studentName.setText(studentName)
 		self.ui.studentID.setText(id)
 		self.ui.studentDept.setText(studentDept)
-		self.ui.schoolName.setText(databag['school'])
+		if len(databag['school']) > 34:
+			truncated = databag['school'][:32] + '...'
+			self.ui.schoolName.setText(truncated)
+			self.ui.schoolName.setToolTip(databag['school'])
+		else:
+			self.ui.schoolName.setText(databag['school'])
 		avatar = self.ui.studentAvatar
-		avatar.setPixmap(QtGui.QPixmap('resources/images/128x128/%s' % studentAvi))
+		if studentAvi == '':
+			avatar.setPixmap(QtGui.QPixmap('resources/images/128x128/default.jpg'))
+		else:
+			avatar.setPixmap(QtGui.QPixmap('resources/images/128x128/%s' % studentAvi))
 		__courses__ = len(databag['departments'][studentDept])
 		# Show the student's department courses
 		for x, course in enumerate(databag['departments'][studentDept]):
@@ -151,9 +159,7 @@ class courseManage(QtGui.QMainWindow):
 		studentIndex = str(self.ui.studentID.text())
 		databag = function.dict_object('data.json')
 		databag['students'][studentIndex][3] = offered
-		bundle = json.dumps(databag)
-		f = open('data.json', 'w')
-		f.write(bundle)
+		function.dump_data(databag)
 		function.talk('Your courses have been updated')
 		self.ui.courseStatus.setText('Courses updated')
 	def logout(self):
@@ -178,6 +184,8 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.setupUi(self)
 		self.setGeometry(300, 100, 750, 520)
 		self.ui.schoolSaved.hide()
+		self.ui.studentSaved.hide()
+		self.ui.courseAdded.hide()
 		self.ui.passwordChanged.hide()
 		self.databag = function.dict_object('data.json')
 		school = self.databag['school']
@@ -185,6 +193,7 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.schoolNameBtn.clicked.connect(self.addSchool)
 		self.ui.changePassBtn.clicked.connect(self.changePass)
 		self.ui.addDeptBtn.clicked.connect(self.addDepartment)
+		self.ui.addStudentBtn.clicked.connect(self.addStudent)
 
 		# Student ID Listings
 		for x, id in enumerate(self.databag['students']):
@@ -198,7 +207,9 @@ class administrationView(QtGui.QMainWindow):
 		# Departments Combo Box
 		for x, department in enumerate(self.databag['departments']):
 			self.ui.courseAddDeptList.addItem('')
+			self.ui.studentDept.addItem('')
 			self.ui.courseAddDeptList.setItemText(x, department)
+			self.ui.studentDept.setItemText(x, department)
 		self.ui.addCourseBtn.clicked.connect(self.addCourses)
 		#Menu Actions
 		self.ui.actionQuit.triggered.connect(self.close)
@@ -210,10 +221,9 @@ class administrationView(QtGui.QMainWindow):
 
 	def addSchool(self):
 		self.databag['school'] = str( self.ui.schoolName.text() )
-		f = open('data.json', 'w')
-		f.write(json.dumps(self.databag))
+		function.dump_data(self.databag)
 		self.ui.schoolSaved.show()
-		QtCore.QTimer.singleShot(1000 * 30, self.ui.schoolSaved.hide)
+		QtCore.QTimer.singleShot(1000 * 5, self.ui.schoolSaved.hide)
 		function.talk('School name saved')
 	def addDepartment(self):
 		deptInput = str( self.ui.addDept.text() )
@@ -222,8 +232,7 @@ class administrationView(QtGui.QMainWindow):
 			function.talk('Empty Input')
 		else:
 			self.databag['departments'][deptInput] = []
-			f = open('data.json', 'w')
-			f.write(json.dumps(self.databag))
+			function.dump_data(self.databag)
 			self.ui.addDeptNotice.setText('Department Saved')
 			self.ui.addDept.clear()
 			# self.ui.courseAddDeptList.repaint()
@@ -235,10 +244,41 @@ class administrationView(QtGui.QMainWindow):
 		else:
 			selectedDepartment = str( self.ui.courseAddDeptList.currentText() )
 			self.databag['departments'][selectedDepartment].append(courseName)
-			f = open('data.json', 'w')
-			f.write(json.dumps(self.databag))
+			function.dump_data(self.databag)
 			self.ui.addCourse.clear()
+			self.ui.courseAdded.show()
 			function.talk("Course added")
+			QtCore.QTimer.singleShot(1000 * 3, self.ui.courseAdded.hide)
+	def addStudent(self):
+		surname = str( self.ui.surname.text() )
+		others = str( self.ui.othernames.text() )
+		department = str( self.ui.studentDept.currentText() )
+		campusID = str( self.ui.campusID.text() )
+		avatar = str( self.ui.studentImage.text() )
+		# Form Validation
+		if surname == '':
+			self.ui.studentSaved.setText("Surname field is required")
+			self.ui.studentSaved.show()
+		elif others == '':
+			self.ui.studentSaved.setText("Other names field is required")
+			self.ui.studentSaved.show()
+		elif campusID == '':
+			self.ui.studentSaved.setText("Campus ID is required")
+			self.ui.studentSaved.show()
+		elif campusID in self.databag['students']:
+			self.ui.studentSaved.setText("A student exists with that ID")
+			self.ui.studentSaved.show()
+		else:
+			self.databag['students'][campusID] = [ surname + ' ' + others, department,avatar,'']
+			function.talk('Student has been added')
+			self.ui.studentSaved.setText("Student Saved")
+			self.ui.studentSaved.show()
+			function.dump_data(self.databag)
+			self.ui.surname.clear()
+			self.ui.othernames.clear()
+			self.ui.campusID.clear()
+			self.ui.studentImage.clear()
+			QtCore.QTimer.singleShot(1000 * 3, self.ui.studentSaved.hide)
 	def changePass(self):
 		"""Changes administrator's password"""
 		newpass = str( self.ui.passwordChange.text() )
@@ -248,8 +288,7 @@ class administrationView(QtGui.QMainWindow):
 			function.talk('password empty!')
 		else:
 			self.databag['auth'] = str(function.computeHash(newpass))
-			f = open('data.json', 'w')
-			f.write(json.dumps(self.databag))
+			function.dump_data(self.databag)
 			self.ui.passwordChanged.setText('Password Updated')
 			self.ui.passwordChanged.show()
 			self.ui.passwordChange.clear()

@@ -124,7 +124,7 @@
      <widget class="QLabel" name="othernamesLabel">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>370</x>
         <y>160</y>
         <width>101</width>
         <height>16</height>
@@ -176,7 +176,7 @@
        <string>Save School Name</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="addStudentBtn">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -210,7 +210,7 @@
        <string>School Saved</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="studentImage">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -223,12 +223,12 @@
        <string notr="true">background:white;color:black;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="surname">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>250</y>
-        <width>681</width>
+        <y>180</y>
+        <width>331</width>
         <height>31</height>
        </rect>
       </property>
@@ -236,25 +236,12 @@
        <string notr="true">background:white;color:black;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="othernames">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>370</x>
         <y>180</y>
-        <width>311</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background:white;color:black;</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_4">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>180</y>
-        <width>311</width>
+        <width>331</width>
         <height>31</height>
        </rect>
       </property>
@@ -273,6 +260,63 @@
       </property>
       <property name="styleSheet">
        <string notr="true">background:white;color:black;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="studentSaved">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Student Added</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="campusID">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>250</y>
+        <width>331</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:white;color:black;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="campusIDLabel">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>230</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Campus ID:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="studentDept">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>250</y>
+        <width>331</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111); color:white;</string>
       </property>
      </widget>
     </widget>
@@ -599,7 +643,7 @@
        <rect>
         <x>300</x>
         <y>90</y>
-        <width>171</width>
+        <width>151</width>
         <height>21</height>
        </rect>
       </property>
@@ -724,6 +768,37 @@ Course</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background: rgb(10, 80, 111);color: white;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="warningDpt">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>551</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Courses cannot be created for departments just added till program is restarted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="courseAdded">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>90</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Course added</string>
       </property>
      </widget>
     </widget>

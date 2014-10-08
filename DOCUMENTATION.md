@@ -88,13 +88,17 @@ we have. This is a python UI compiler and its goal is to translate our XML ui
 to a python module. This module should be imported into our actual program as
 we can't make direct changes to it since it may change each time we make GUI
 updates and compile into python. Pyuic is used as shown:
+
 ```pyuic designfile.ui -o design.py```
+
 That may be considered all that is required for the program from Qt designer but
 in cases like registron where we have some images added with resource files that
 are listed in a app.qrc file, we have to convert this resource files into binary
 to work properly with the program. For this we use pyrcc which is python resource
 compiler.
+
 ```pyrcc app.qrc > app_rc.py```
+
 That generates a app_rc.py python module for use with our GUI module. For images
 that vary in the GUI we use QPixmap to dynamically add images to the canvas so it
 needs to prior compilation of binary as it just fetches the image from its source.
@@ -137,5 +141,6 @@ Some useful references:
 - [http://pythonkit.com/PyQt-pdf.html](http://pythonkit.com/PyQt-pdf.html)
 - [http://zetcode.com/gui/pyqt4/](http://zetcode.com/gui/pyqt4/)
 - [http://pyqt.sourceforge.net/Docs/PyQt4/designer.html](http://pyqt.sourceforge.net/Docs/PyQt4/designer.html)
+- [https://www.google.ca/#q=text+to+speech+implementation](https://www.google.ca/#q=text+to+speech+implementation)
 
 [1]:https://github.com/parente/pyttsx

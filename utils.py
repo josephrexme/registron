@@ -20,6 +20,10 @@ def dict_object(filename):
 	json_string = name.read()
 	json_loaded = json.loads(json_string)
 	return json_loaded
+def dump_data(data):
+	"""Dumps dictionary data back to JSON file format"""
+	f = open('data.json', 'w')
+	f.write(json.dumps(data))
 def openGitPage():
 	"""Opens project github repository in browser"""
 	webbrowser.open('https://github.com/bl4ckdu5t/registron')
