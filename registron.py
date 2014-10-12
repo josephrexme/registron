@@ -144,9 +144,9 @@ class courseManage(QtGui.QMainWindow):
 			self.ui.schoolName.setText(databag['school'])
 		avatar = self.ui.studentAvatar
 		if studentAvi == '':
-			avatar.setPixmap(QtGui.QPixmap('resources/images/128x128/default.jpg'))
+			avatar.setPixmap(QtGui.QPixmap(function.resource_path('resources/images/128x128/default.jpg')))
 		else:
-			avatar.setPixmap(QtGui.QPixmap('resources/images/128x128/%s' % studentAvi))
+			avatar.setPixmap(QtGui.QPixmap(function.resource_path('resources/images/128x128/%s' % studentAvi)))
 		__courses__ = len(databag['departments'][studentDept])
 		# Show the student's department courses
 		for x, course in enumerate(databag['departments'][studentDept]):

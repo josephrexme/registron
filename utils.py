@@ -1,4 +1,4 @@
-import webbrowser, json
+import webbrowser, json, os, sys
 from PyQt4 import QtCore
 try:
 	import pyttsx
@@ -27,3 +27,10 @@ def dump_data(data):
 def openGitPage():
 	"""Opens project github repository in browser"""
 	webbrowser.open('https://github.com/bl4ckdu5t/registron')
+def resource_path(relative_path):
+	""" PyInstaller resource path"""
+	try:
+		base_path = sys._MEIPASS
+	except Exception:
+		base_path = os.path.abspath(".")
+	return os.path.join(base_path, relative_path)
