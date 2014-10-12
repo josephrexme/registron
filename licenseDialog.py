@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'licenseDialog.ui'
 #
-# Created: Sat Sep 13 15:55:14 2014
+# Created: Sat Oct 11 16:02:54 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -18,6 +18,7 @@ class Ui_licenseDialog(object):
     def setupUi(self, licenseDialog):
         licenseDialog.setObjectName(_fromUtf8("licenseDialog"))
         licenseDialog.resize(591, 550)
+        licenseDialog.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111);"))
         licenseDialog.setModal(True)
         self.buttonBox = QtGui.QDialogButtonBox(licenseDialog)
         self.buttonBox.setGeometry(QtCore.QRect(240, 510, 341, 32))
@@ -26,7 +27,7 @@ class Ui_licenseDialog(object):
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.licenseInfo = QtGui.QLabel(licenseDialog)
         self.licenseInfo.setGeometry(QtCore.QRect(10, 30, 571, 471))
-        self.licenseInfo.setStyleSheet(_fromUtf8("color:white;"))
+        self.licenseInfo.setStyleSheet(_fromUtf8("color:white;background: rgb(10, 80, 111);"))
         self.licenseInfo.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.licenseInfo.setObjectName(_fromUtf8("licenseInfo"))
 

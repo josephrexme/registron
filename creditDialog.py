@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'creditDialog.ui'
 #
-# Created: Thu Sep 18 10:30:18 2014
+# Created: Sat Oct 11 16:03:56 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -18,6 +18,7 @@ class Ui_creditDialog(object):
     def setupUi(self, creditDialog):
         creditDialog.setObjectName(_fromUtf8("creditDialog"))
         creditDialog.resize(416, 260)
+        creditDialog.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111);"))
         creditDialog.setModal(True)
         self.buttonBox = QtGui.QDialogButtonBox(creditDialog)
         self.buttonBox.setGeometry(QtCore.QRect(60, 220, 341, 32))
@@ -26,7 +27,7 @@ class Ui_creditDialog(object):
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.creditInfo = QtGui.QLabel(creditDialog)
         self.creditInfo.setGeometry(QtCore.QRect(20, 50, 371, 141))
-        self.creditInfo.setStyleSheet(_fromUtf8("color:white;"))
+        self.creditInfo.setStyleSheet(_fromUtf8("color:white;background: rgb(10, 80, 111);"))
         self.creditInfo.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.creditInfo.setObjectName(_fromUtf8("creditInfo"))
 

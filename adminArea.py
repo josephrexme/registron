@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'adminArea.ui'
 #
-# Created: Tue Oct  7 19:23:22 2014
+# Created: Sun Oct 12 00:02:24 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -284,8 +284,11 @@ class Ui_adminWindow(object):
         adminWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(adminWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 745, 21))
+        self.menubar.setStyleSheet(_fromUtf8("color: white;"))
+        self.menubar.setDefaultUp(False)
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuMenu = QtGui.QMenu(self.menubar)
+        self.menuMenu.setStyleSheet(_fromUtf8(""))
         self.menuMenu.setObjectName(_fromUtf8("menuMenu"))
         self.menuAdministrators = QtGui.QMenu(self.menubar)
         self.menuAdministrators.setObjectName(_fromUtf8("menuAdministrators"))

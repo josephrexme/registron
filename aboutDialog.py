@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'aboutDialog.ui'
 #
-# Created: Fri Sep 19 05:35:38 2014
+# Created: Sat Oct 11 16:02:01 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -18,6 +18,7 @@ class Ui_AboutDialog(object):
     def setupUi(self, AboutDialog):
         AboutDialog.setObjectName(_fromUtf8("AboutDialog"))
         AboutDialog.resize(421, 288)
+        AboutDialog.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111);"))
         AboutDialog.setModal(True)
         self.buttonBox = QtGui.QDialogButtonBox(AboutDialog)
         self.buttonBox.setGeometry(QtCore.QRect(70, 250, 341, 32))
@@ -26,7 +27,7 @@ class Ui_AboutDialog(object):
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.aboutInfo = QtGui.QLabel(AboutDialog)
         self.aboutInfo.setGeometry(QtCore.QRect(20, 30, 371, 211))
-        self.aboutInfo.setStyleSheet(_fromUtf8("color:white;"))
+        self.aboutInfo.setStyleSheet(_fromUtf8("color:white;background: rgb(10, 80, 111);"))
         self.aboutInfo.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.aboutInfo.setObjectName(_fromUtf8("aboutInfo"))
 

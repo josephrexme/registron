@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'authDialog.ui'
 #
-# Created: Fri Sep 19 12:58:12 2014
+# Created: Sun Oct 12 00:01:47 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,7 +17,8 @@ except AttributeError:
 class Ui_authDialog(object):
     def setupUi(self, authDialog):
         authDialog.setObjectName(_fromUtf8("authDialog"))
-        authDialog.resize(336, 239)
+        authDialog.resize(336, 243)
+        authDialog.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111); color: white;"))
         authDialog.setModal(True)
         self.formLayoutWidget = QtGui.QWidget(authDialog)
         self.formLayoutWidget.setGeometry(QtCore.QRect(20, 80, 291, 61))
@@ -30,9 +31,11 @@ class Ui_authDialog(object):
         self.usernameLabel.setObjectName(_fromUtf8("usernameLabel"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.usernameLabel)
         self.adminUname = QtGui.QLineEdit(self.formLayoutWidget)
+        self.adminUname.setStyleSheet(_fromUtf8("color:black; background: white;"))
         self.adminUname.setObjectName(_fromUtf8("adminUname"))
         self.formLayout.setWidget(0, QtGui.QFormLayout.FieldRole, self.adminUname)
         self.adminPass = QtGui.QLineEdit(self.formLayoutWidget)
+        self.adminPass.setStyleSheet(_fromUtf8("background: white; color: black;"))
         self.adminPass.setEchoMode(QtGui.QLineEdit.Password)
         self.adminPass.setObjectName(_fromUtf8("adminPass"))
         self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.adminPass)
@@ -52,6 +55,7 @@ class Ui_authDialog(object):
         self.errorDisplay.setObjectName(_fromUtf8("errorDisplay"))
         self.logBtn = QtGui.QPushButton(authDialog)
         self.logBtn.setGeometry(QtCore.QRect(120, 160, 89, 23))
+        self.logBtn.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111);"))
         self.logBtn.setObjectName(_fromUtf8("logBtn"))
         self.authError = QtGui.QLabel(authDialog)
         self.authError.setGeometry(QtCore.QRect(10, 200, 311, 21))

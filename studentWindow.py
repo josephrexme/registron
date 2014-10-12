@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'studentwindow.ui'
 #
-# Created: Tue Sep 23 11:18:16 2014
+# Created: Sun Oct 12 00:02:01 2014
 #      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -243,6 +243,7 @@ class Ui_studentWindow(object):
         self.course15.setObjectName(_fromUtf8("course15"))
         self.verifyBtn = QtGui.QPushButton(self.centralwidget)
         self.verifyBtn.setGeometry(QtCore.QRect(530, 500, 181, 31))
+        self.verifyBtn.setStyleSheet(_fromUtf8("background: rgb(10, 80, 111); color: white;"))
         self.verifyBtn.setObjectName(_fromUtf8("verifyBtn"))
         self.courseCheck1 = QtGui.QCheckBox(self.centralwidget)
         self.courseCheck1.setGeometry(QtCore.QRect(220, 210, 16, 18))
@@ -326,8 +327,10 @@ class Ui_studentWindow(object):
         studentWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(studentWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 746, 21))
+        self.menubar.setStyleSheet(_fromUtf8("color:white;"))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuMenu = QtGui.QMenu(self.menubar)
+        self.menuMenu.setStyleSheet(_fromUtf8(""))
         self.menuMenu.setObjectName(_fromUtf8("menuMenu"))
         self.menuAdministrators = QtGui.QMenu(self.menubar)
         self.menuAdministrators.setObjectName(_fromUtf8("menuAdministrators"))

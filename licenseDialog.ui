@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MIT License</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background: rgb(10, 80, 111);</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -42,7 +45,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;</string>
+    <string notr="true">color:white;background: rgb(10, 80, 111);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;The MIT License (MIT)&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Copyright (c) 2014 Registron&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Permission is hereby granted, free of charge, to any person obtaining a copy&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;in the Software without restriction, including without limitation the rights&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;copies of the Software, and to permit persons to whom the Software is&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;furnished to do so, subject to the following conditions:&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;The above copyright notice and this permission notice shall be included in all&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;copies or substantial portions of the Software.&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;SOFTWARE.&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>

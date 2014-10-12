@@ -686,6 +686,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(10, 80, 111); color: white;</string>
+    </property>
     <property name="text">
      <string>Save Courses</string>
     </property>
@@ -956,7 +959,13 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;</string>
+   </property>
    <widget class="QMenu" name="menuMenu">
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="title">
      <string>Application</string>
     </property>
