@@ -15,6 +15,7 @@ from authDialog import Ui_authDialog
 from licenseDialog import Ui_licenseDialog
 from studentWindow import Ui_studentWindow
 from adminArea import Ui_adminWindow
+from errorDialog import Ui_errorDialog
 
 class Main(QtGui.QMainWindow):
 	"""Main class for registron"""
@@ -64,6 +65,13 @@ class CreditBox(QtGui.QDialog):
 	def __init__(self):
 		QtGui.QDialog.__init__(self)
 		self.ui = Ui_creditDialog()
+		self.ui.setupUi(self)
+
+class errorBox(QtGui.QDialog):
+	"""Displays error dialog when data file is missing"""
+	def __init__(self):
+		QtGui.QDialog.__init__(self)
+		self.ui = Ui_errorDialog()
 		self.ui.setupUi(self)
 
 class Authentication(QtGui.QDialog):
@@ -297,17 +305,21 @@ class administrationView(QtGui.QMainWindow):
 		self.hide()
 		window.show()
 
+
 app = QtGui.QApplication(sys.argv)
+license = LicenseDisp()
 about = AboutBox()
 credits = CreditBox()
+errorWindow = errorBox()
 authentication = Authentication()
-license = LicenseDisp()
-manageCourse = courseManage()
-administration = administrationView()
-window = Main()
-
 if __name__ == '__main__':
-	window.show()
-	QtCore.QTimer.singleShot(500, window.greetWelcome) # Greet after 500 milliseconds
+	try:
+		manageCourse = courseManage()
+		administration = administrationView()
+		window = Main()
+		window.show()
+		QtCore.QTimer.singleShot(500, window.greetWelcome) # Greet after 500 milliseconds
+	except IOError: # Cases where data.json file is missing
+		errorWindow.show()
 	sys.exit(app.exec_())
 
