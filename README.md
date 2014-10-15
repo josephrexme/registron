@@ -8,7 +8,7 @@ Registron is a speech-based registration program. [read more..][5]
 - PyQt4
 - Pyuic 4.9.3
 - [Qt Designer 4.8.2][2]
-- [py2exe][3] (For Windows executable bindings)
+- [pyinstaller][3] (For Windows executable bindings)
 
 #### Third Party Modules
 - Pyttsx (Python Text To Speech)
@@ -22,20 +22,14 @@ Registron is a speech-based registration program. [read more..][5]
 
 ```pip install pyttsx````
 
-#### Adding student images
-Edit app.qrc resource file and append the location of the image in the ```<file>``` tag. Make sure this image exists and also that that the tags are properly closed. after this, run the following command
-
-```pyrcc4 app.qrc > app_rc.py```
-
 #### Default Admin Credentials
 > username: admin, password: password
 
-#### Contributors
-- [Joseph Rex](http://josephrex.me)
-- [James Olanipekun][4]
+
+[Read the docs][4]
 
 [1]:http://python.org
 [2]:http://qt-project.org
-[3]:http://www.py2exe.org/
-[4]:https://www.google.ca/#q=james+olanipekun
+[3]:http://www.pyinstaller.org/
+[4]:https://github.com/bl4ckdu5t/registron/blob/master/DOCUMENTATION.md
 [5]:https://bl4ckdu5t.github.io/registron

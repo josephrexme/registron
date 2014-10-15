@@ -5,7 +5,7 @@ Documentation for Registron
 - [Program utils module](#chapter3)
 - [Using Qt designer with pyrcc and pyuic](#chapter4)
 - [The program logic](#chapter5)
-- [Creating the windows exe with py2exe](#chapter6)
+- [Creating the windows exe with pyinstaller](#chapter6)
 - [References](#chapter7)
 
 <h3 id="chapter1" name="chapter1">Registron as a python program</h3>
@@ -126,21 +126,52 @@ code and a flow chart.
 
 <img src="http://i.imgur.com/ELyV6AK.png" alt="Registron Flowchart">
 
-<h3 id="chapter6" name="chapter6">Creating the windows exe with py2exe</h3>
-This part is coming soon...
+<h3 id="chapter6" name="chapter6">Creating the windows exe with pyinstaller</h3>
+Pyinstaller allows binaries for various operating system(Windows, Mac OS X, and Linux)
+to be created. To create an exe for windows, it has to be bundled on a windows machine.
+It also integrates [UPX (Ultimate packer for Executables)][2] into build processes when
+installed. We start by running the *configure.py* file to customize pyinstaller
+for our installation of python.
+```python configure.py```
+
+Now we install [UPX][2] for compressing the exe file and we navigate to our Pyinstaller
+directory to run the following
+
+```python makespec.py --onefile --upx registron.py```
+
+```python build.py registron.spec```
+
+Now this creates our registron.exe file and it takes a longer build time because upx
+takes extra time compressing the executable.
+
 <h3 id="chapter7" name="chapter7">References</h3>
 Some useful references:
-- [http://pyttsx.readthedocs.org/en/latest/](http://pyttsx.readthedocs.org/en/latest/)
-- [https://github.com/parente/pyttsx](https://github.com/parente/pyttsx)
-- [http://pyqt.sourceforge.net/Docs/PyQt4/designer.html](http://pyqt.sourceforge.net/Docs/PyQt4/designer.html)
-- [https://wiki.python.org/moin/PyQt4](https://wiki.python.org/moin/PyQt4)
-- [http://josephrex.me/getting-started-with-gui-development-in-python/](http://josephrex.me/getting-started-with-gui-development-in-python/)
-- [http://pyqt.sourceforge.net/Docs/PyQt4/classes.html](http://pyqt.sourceforge.net/Docs/PyQt4/classes.html)
-- [http://doc.qt.digia.com/4.6/index.html](http://doc.qt.digia.com/4.6/index.html)
-- [http://www.riverbankcomputing.com/software/sip/intro](http://www.riverbankcomputing.com/software/sip/intro)
-- [http://pythonkit.com/PyQt-pdf.html](http://pythonkit.com/PyQt-pdf.html)
-- [http://zetcode.com/gui/pyqt4/](http://zetcode.com/gui/pyqt4/)
-- [http://pyqt.sourceforge.net/Docs/PyQt4/designer.html](http://pyqt.sourceforge.net/Docs/PyQt4/designer.html)
-- [https://www.google.ca/#q=text+to+speech+implementation](https://www.google.ca/#q=text+to+speech+implementation)
+- [http://pyttsx.readthedocs.org/en/latest/][0]
+- [https://github.com/parente/pyttsx][1]
+- [http://upx.sourceforge.net/#download][2]
+- [http://josephrex.me/getting-started-with-gui-development-in-python/][3]
+- [http://pyqt.sourceforge.net/Docs/PyQt4/classes.html][4]
+- [http://pyqt.sourceforge.net/Docs/PyQt4/designer.html][5]
+- [https://wiki.python.org/moin/PyQt4][6]
+- [http://doc.qt.digia.com/4.6/index.html][7]
+- [http://www.riverbankcomputing.com/software/sip/intro][8]
+- [http://pythonkit.com/PyQt-pdf.html][9]
+- [http://zetcode.com/gui/pyqt4/][10]
+- [http://pyqt.sourceforge.net/Docs/PyQt4/designer.html][11]
+- [http://pyinstaller.org/][12]
+- [https://www.google.ca/#q=text+to+speech+implementation][13]
 
+[0]:http://pyttsx.readthedocs.org/en/latest/
 [1]:https://github.com/parente/pyttsx
+[2]:http://upx.sourceforge.net/#download
+[3]:http://josephrex.me/getting-started-with-gui-development-in-python/
+[4]:http://pyqt.sourceforge.net/Docs/PyQt4/classes.html
+[5]:http://pyqt.sourceforge.net/Docs/PyQt4/designer.html
+[6]:https://wiki.python.org/moin/PyQt4
+[7]:http://doc.qt.digia.com/4.6/index.html
+[8]:http://www.riverbankcomputing.com/software/sip/intro
+[9]:http://pythonkit.com/PyQt-pdf.html
+[10]:http://zetcode.com/gui/pyqt4/
+[11]:http://pyqt.sourceforge.net/Docs/PyQt4/designer.html
+[12]:http://pyinstaller.org/
+[13]:https://www.google.ca/#q=text+to+speech+implementation
