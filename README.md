@@ -9,8 +9,6 @@ Registron is a speech-based registration program. [read more..][5]
 - Pyuic 4.9.3
 - [Qt Designer 4.8.2][2]
 - [pyinstaller][3] (For Windows executable bindings)
-
-#### Third Party Modules
 - Pyttsx (Python Text To Speech)
 
 > To run from source files directly, switch to the source branch and simply run
