@@ -1,0 +1,10 @@
+Student ID Listings
+self.students = []
+for x, id in enumerate(self.databag['students']):
+	s = x * 30
+	student = QtGui.QLabel(self.ui.scrollAreaWidgetContents)
+	student.setGeometry(QtCore.QRect(0, s, 195, 30))
+	student.setFrameShape(QtGui.QFrame.Panel)
+	student.setText(id)
+	student.setStyleSheet('color: rgb(255,255,255);')
+	self.students.append(student)
