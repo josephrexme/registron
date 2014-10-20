@@ -195,6 +195,11 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.studentSaved.hide()
 		self.ui.courseAdded.hide()
 		self.ui.passwordChanged.hide()
+		self.ui.editUpdateNotif.hide()
+		self.ui.studentNotFound.hide()
+		self.ui.studentRecordSuccess.hide()
+		self.ui.dataEditContainer.hide()
+		self.ui.studentRecorded.hide()
 		self.databag = function.dict_object('data.json')
 		school = self.databag['school']
 		self.ui.schoolName.setText(school)
@@ -202,22 +207,35 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.changePassBtn.clicked.connect(self.changePass)
 		self.ui.addDeptBtn.clicked.connect(self.addDepartment)
 		self.ui.addStudentBtn.clicked.connect(self.addStudent)
+		self.ui.editStudentBtn.clicked.connect(self.editStudent)
+		self.ui.updateStudentBtn.clicked.connect(self.updateStudent)
+		self.ui.deleteDeptBtn.clicked.connect(self.deleteDepartment)
+		self.ui.deleteCourseBtn.clicked.connect(self.deleteCourse)
+		self.ui.DeptEditBtn.clicked.connect(self.editDept)
+		self.ui.CourseEditBtn.clicked.connect(self.editCourse)
 
-		# Student ID Listings
-		for x, id in enumerate(self.databag['students']):
-			pass #print x, id
-		self.studentIndex1 = QtGui.QLabel(self.ui.scrollAreaWidgetContents)
-		self.studentIndex1.setGeometry(QtCore.QRect(0, 0, 195, 30))
-		self.studentIndex1.setFrameShape(QtGui.QFrame.Panel)
-		self.studentIndex1.setStyleSheet('color: rgb(0,0,0);background: rgb(255, 255, 255)')
-		self.studentIndex1.setText("I am numbra one")
-		self.studentIndex1.setObjectName(QtCore.QString.fromUtf8("studentIndex1"))
 		# Departments Combo Box
 		for x, department in enumerate(self.databag['departments']):
 			self.ui.courseAddDeptList.addItem('')
+			self.ui.deptEditSelect.addItem('')
 			self.ui.studentDept.addItem('')
+			self.ui.ed_department.addItem('')
 			self.ui.courseAddDeptList.setItemText(x, department)
+			self.ui.deptEditSelect.setItemText(x, department)
 			self.ui.studentDept.setItemText(x, department)
+			self.ui.ed_department.setItemText(x, department)
+		self.ui.DeptEdit.setText( str( self.ui.deptEditSelect.currentText() ) )
+
+		# Dependent Courses Combo Box
+		presentDeptCourses = str( self.ui.deptEditSelect.currentText() )
+		for x, course in enumerate(self.databag['departments'][presentDeptCourses]):
+			self.ui.courseEditSelect.addItem('')
+			self.ui.courseEditSelect.setItemText(x, course)
+		
+		self.ui.CourseEdit.setText( str(self.ui.courseEditSelect.currentText()) )
+
+		self.ui.deptEditSelect.currentIndexChanged.connect(self.updateCourseList)
+		self.ui.courseEditSelect.currentIndexChanged.connect(self.updateCourseEdit)
 		self.ui.addCourseBtn.clicked.connect(self.addCourses)
 		#Menu Actions
 		self.ui.actionQuit.triggered.connect(self.close)
@@ -227,6 +245,98 @@ class administrationView(QtGui.QMainWindow):
 		self.ui.actionLicense.triggered.connect(license.show)
 		self.ui.actionAdmin_Logout.triggered.connect(self.closeAdmin)
 
+	def editCourse(self):
+		currentIndex = self.ui.courseEditSelect.currentIndex()
+		currentDept = str( self.ui.deptEditSelect.currentText() )
+		currentCourse = str( self.ui.courseEditSelect.currentText() )
+		value = str( self.ui.CourseEdit.text() )
+		self.databag['departments'][currentDept][currentIndex] = value
+		function.dump_data(self.databag)
+		function.talk('Course name changed')
+		self.ui.editUpdateNotif.show()
+		QtCore.QTimer.singleShot(1000 * 10, self.ui.editUpdateNotif.hide)
+		self.ui.courseEditSelect.setItemText(currentIndex, value)
+
+	def editDept(self):
+		currentIndex = self.ui.deptEditSelect.currentIndex()
+		currentDept = str( self.ui.deptEditSelect.currentText() )
+		value = str( self.ui.DeptEdit.text() )
+		self.databag['departments'][value] = self.databag['departments'].pop(currentDept)
+		function.dump_data(self.databag)
+		function.talk('department name changed')
+		self.ui.editUpdateNotif.show()
+		QtCore.QTimer.singleShot(1000 * 10, self.ui.editUpdateNotif.hide)
+		self.ui.deptEditSelect.setItemText(currentIndex, value)
+
+	def deleteCourse(self):
+		currentIndex = self.ui.courseEditSelect.currentIndex()
+		currentDept = str( self.ui.deptEditSelect.currentText() )
+		currentCourse = str( self.ui.courseEditSelect.currentText() )
+		self.databag['departments'][currentDept].remove(currentCourse)
+		function.dump_data(self.databag)
+		self.ui.editUpdateNotif.show()
+		function.talk('course has been deleted')
+		QtCore.QTimer.singleShot(1000 * 10, self.ui.editUpdateNotif.hide)
+		self.ui.courseEditSelect.removeItem(currentIndex)
+
+	def deleteDepartment(self):
+		currentIndex = self.ui.deptEditSelect.currentIndex()
+		currentDept = str( self.ui.deptEditSelect.currentText() )
+		self.databag['departments'].pop(currentDept)
+		function.dump_data(self.databag)
+		self.ui.editUpdateNotif.show()
+		function.talk('department deleted')
+		QtCore.QTimer.singleShot(1000 * 10, self.ui.editUpdateNotif.hide)
+		self.ui.deptEditSelect.removeItem(currentIndex)
+
+	def editStudent(self):
+		enteredId = str( self.ui.matricEditEntry.text() )
+		if self.databag['students'].has_key(enteredId):
+			self.ui.studentNotFound.hide()
+			self.ui.studentRecordSuccess.hide()
+			self.ui.ed_studentName.setText( self.databag['students'][enteredId][0] )
+			self.ui.ed_studentID.setText(enteredId)
+			for x, department in enumerate(self.databag['departments']):
+				if department == self.databag['students'][enteredId][1]:
+					self.ui.ed_department.setCurrentIndex(x)
+			self.ui.ed_image.setText( self.databag['students'][enteredId][2] )
+			self.ui.dataEditContainer.show()
+		else:
+			self.ui.dataEditContainer.hide()
+			self.ui.studentNotFound.show()
+			QtCore.QTimer.singleShot(1000 * 5, self.ui.studentNotFound.hide)
+
+	def updateStudent(self):
+		studentID = str( self.ui.ed_studentID.text() )
+		name = str( self.ui.ed_studentName.text() )
+		studentDept = str( self.ui.ed_department.currentText() )
+		studentImage = str( self.ui.ed_image.text() )
+		if not studentID or not name or not studentDept:
+			self.ui.studentRecorded.show()
+			QtCore.QTimer.singleShot(1000 * 10, self.ui.studentRecorded.hide)
+		else:
+			enteredId = str( self.ui.matricEditEntry.text() )
+			currentCourses = self.databag['students'][enteredId][3]
+			self.databag['students'][enteredId] = [name, studentDept, studentImage, currentCourses]
+			self.databag['students'][studentID] = self.databag['students'].pop(enteredId)
+			self.ui.matricEditEntry.clear()
+			self.ui.dataEditContainer.hide()
+			self.ui.studentRecordSuccess.show()
+			QtCore.QTimer.singleShot(1000 * 10, self.ui.studentRecordSuccess.hide)
+			function.dump_data(self.databag)
+
+
+	def updateCourseList(self):
+		self.ui.DeptEdit.setText( str( self.ui.deptEditSelect.currentText() ) )
+		presentDeptCourses = str( self.ui.deptEditSelect.currentText() )
+		for x, course in enumerate(self.databag['departments'][presentDeptCourses]):
+			self.ui.courseEditSelect.addItem('')
+			self.ui.courseEditSelect.setItemText(x, course)
+		
+		self.ui.CourseEdit.setText( str(self.ui.courseEditSelect.currentText()) )
+	def updateCourseEdit(self):
+		self.ui.CourseEdit.setText( str(self.ui.courseEditSelect.currentText()) )
+
 	def addSchool(self):
 		self.databag['school'] = str( self.ui.schoolName.text() )
 		function.dump_data(self.databag)
@@ -235,7 +345,7 @@ class administrationView(QtGui.QMainWindow):
 		function.talk('School name saved')
 	def addDepartment(self):
 		deptInput = str( self.ui.addDept.text() )
-		if deptInput == '':
+		if not deptInput:
 			self.ui.addDeptNotice.setText("Empty Input")
 			function.talk('Empty Input')
 		else:
@@ -243,7 +353,10 @@ class administrationView(QtGui.QMainWindow):
 			function.dump_data(self.databag)
 			self.ui.addDeptNotice.setText('Department Saved')
 			self.ui.addDept.clear()
-			# self.ui.courseAddDeptList.repaint()
+			self.ui.courseAddDeptList.addItem(deptInput)
+			self.ui.deptEditSelect.addItem(deptInput)
+			self.ui.studentDept.addItem(deptInput)
+			self.ui.ed_department.addItem(deptInput)
 			function.talk("Department saved")
 	def addCourses(self):
 		courseName = str( self.ui.addCourse.text() )

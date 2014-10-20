@@ -9,5 +9,7 @@
     <file>resources/images/48x48/stop.png</file>
     <file>resources/images/80x80/registron.png</file>
     <file>resources/images/48x48/registron.png</file>
+    <file>resources/icons/checked.png</file>
+    <file>resources/icons/warning.png</file>
   </qresource>
 </RCC>

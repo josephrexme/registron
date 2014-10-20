@@ -334,76 +334,170 @@
        </rect>
       </property>
       <property name="text">
-       <string>Click on student ID to edit profile</string>
+       <string>Enter Student ID to edit record</string>
       </property>
      </widget>
-     <widget class="QScrollArea" name="studentsLIst">
+     <widget class="QWidget" name="dataEditContainer" native="true">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>40</y>
-        <width>201</width>
-        <height>361</height>
+        <y>80</y>
+        <width>491</width>
+        <height>331</height>
        </rect>
       </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);</string>
       </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents">
+      <widget class="QLineEdit" name="ed_studentName">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>197</width>
-         <height>357</height>
+         <x>10</x>
+         <y>40</y>
+         <width>451</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;background:white;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="studnameLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Student Name:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="studidLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Campus ID:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_studentID">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>451</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;background:white;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="studDeptLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Department:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="studImageLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Image file name:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ed_image">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>240</y>
+         <width>451</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;background:white;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="updateStudentBtn">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>280</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgb(10, 80, 111); color: white;</string>
+       </property>
+       <property name="text">
+        <string>Update Record</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="studentRecorded">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>280</y>
+         <width>251</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/resources/icons/warning.png&quot;/&gt;Fill the necessary empty fields&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="ed_department">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>451</width>
+         <height>31</height>
         </rect>
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="studnameLabel">
+     <widget class="QLineEdit" name="matricEditEntry">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>10</x>
         <y>40</y>
-        <width>121</width>
-        <height>16</height>
+        <width>341</width>
+        <height>31</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Student Name:</string>
+      <property name="styleSheet">
+       <string notr="true">color:black; background: white;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="studDeptLabel">
+     <widget class="QPushButton" name="editStudentBtn">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>180</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Department:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="studImageLabel">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>250</y>
-        <width>121</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Image file name:</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="updateStudentBtn">
-      <property name="geometry">
-       <rect>
-        <x>560</x>
-        <y>320</y>
+        <x>370</x>
+        <y>40</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -412,74 +506,44 @@
        <string notr="true">background: rgb(10, 80, 111); color: white;</string>
       </property>
       <property name="text">
-       <string>Update Record</string>
+       <string>Edit Student</string>
       </property>
      </widget>
-     <widget class="QLabel" name="studidLabel">
+     <widget class="QLabel" name="studentNotFound">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>110</y>
-        <width>121</width>
-        <height>16</height>
+        <x>10</x>
+        <y>90</y>
+        <width>301</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>Campus ID:</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/resources/icons/warning.png&quot;/&gt;Student Record not found in our database&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="ed_studentName">
+     <widget class="QLabel" name="studentRecordSuccess">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>60</y>
-        <width>451</width>
-        <height>31</height>
+        <x>20</x>
+        <y>100</y>
+        <width>291</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:black;background:white;</string>
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/resources/icons/checked.png&quot;/&gt; Student record has been updated&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="ed_studentID">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>130</y>
-        <width>451</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:black;background:white;</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="ed_department">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>200</y>
-        <width>451</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:black;background:white;</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="ed_image">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>270</y>
-        <width>451</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color:black;background:white;</string>
-      </property>
-     </widget>
+     <zorder>studentRecordSuccess</zorder>
+     <zorder>studentNotFound</zorder>
+     <zorder>studlistLabel</zorder>
+     <zorder>dataEditContainer</zorder>
+     <zorder>matricEditEntry</zorder>
+     <zorder>editStudentBtn</zorder>
     </widget>
     <widget class="QWidget" name="coursesTab">
      <attribute name="title">
@@ -561,29 +625,6 @@
        <string>Select Department to Edit Courses in it:</string>
       </property>
      </widget>
-     <widget class="QScrollArea" name="scrollArea">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>210</y>
-        <width>221</width>
-        <height>201</height>
-       </rect>
-      </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>217</width>
-         <height>197</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
@@ -657,83 +698,68 @@
        <string>Department:</string>
       </property>
      </widget>
-     <widget class="QScrollArea" name="scrollArea_2">
+     <widget class="QPushButton" name="deleteDeptBtn">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>210</y>
-        <width>231</width>
-        <height>201</height>
+        <x>10</x>
+        <y>350</y>
+        <width>271</width>
+        <height>31</height>
        </rect>
       </property>
-      <property name="widgetResizable">
-       <bool>true</bool>
-      </property>
-      <widget class="QWidget" name="scrollAreaWidgetContents_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>227</width>
-         <height>197</height>
-        </rect>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>240</y>
-        <width>111</width>
-        <height>41</height>
-       </rect>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);color: white;</string>
       </property>
       <property name="text">
-       <string>Delete 
-Department</string>
+       <string>Delete Department</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="DeptEditBtn">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>300</y>
-        <width>111</width>
-        <height>41</height>
+        <x>10</x>
+        <y>310</y>
+        <width>271</width>
+        <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);color: white;</string>
+      </property>
       <property name="text">
-       <string>Edit 
-Department</string>
+       <string>Edit Department</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_7">
+     <widget class="QPushButton" name="deleteCourseBtn">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>240</y>
-        <width>111</width>
-        <height>41</height>
+        <x>320</x>
+        <y>350</y>
+        <width>271</width>
+        <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);color: white;</string>
+      </property>
       <property name="text">
-       <string>Delete 
-Course</string>
+       <string>Delete Course</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QPushButton" name="CourseEditBtn">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>300</y>
-        <width>111</width>
-        <height>41</height>
+        <x>320</x>
+        <y>310</y>
+        <width>271</width>
+        <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);color: white;</string>
+      </property>
       <property name="text">
-       <string>Edit 
-Course</string>
+       <string>Edit Course</string>
       </property>
      </widget>
      <widget class="QLabel" name="addDeptNotice">
@@ -770,19 +796,6 @@ Course</string>
        <string notr="true">background: rgb(10, 80, 111);color: white;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="warningDpt">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>160</y>
-        <width>551</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note:&lt;/span&gt; Courses cannot be created for departments just added till program is restarted.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="courseAdded">
       <property name="geometry">
        <rect>
@@ -799,6 +812,76 @@ Course</string>
       </property>
       <property name="text">
        <string>Course added</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="deptEditSelect">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>271</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);color: white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="DeptEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(0,0,0); background: white;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="courseEditSelect">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>220</y>
+        <width>271</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgb(10, 80, 111);color: white;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="CourseEdit">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>270</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(0,0,0); background: white;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="editUpdateNotif">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>400</y>
+        <width>421</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>Item updated</string>
       </property>
      </widget>
     </widget>
