@@ -33,4 +33,4 @@ Registron is a speech-based registration program. [read more..][5]
 [3]:http://www.pyinstaller.org/
 [4]:https://github.com/bl4ckdu5t/registron/blob/master/DOCUMENTATION.md
 [5]:https://bl4ckdu5t.github.io/registron
-[6]:https://registron-windows.sourceforge.net
+[6]:https://sourceforge.net/projects/registron-windows/files/latest/download
