@@ -1,0 +1,9 @@
+('/home/bl4ckdu5t/Dev/Python/python lab/registron/dist/registron',
+ False,
+ False,
+ None,
+ None,
+ [],
+ None,
+ False,
+ 1414449379)

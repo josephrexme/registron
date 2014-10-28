@@ -1,0 +1,9 @@
+('C:\\Users\\Joseph Rex\\Desktop\\Python Windows\\registron\\registron\\dist\\registron.exe',
+ False,
+ False,
+ 'registron.ico',
+ None,
+ [],
+ None,
+ True,
+ 1414447040L)
